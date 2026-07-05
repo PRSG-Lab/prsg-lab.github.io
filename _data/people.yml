@@ -3,6 +3,7 @@ pi:
     name_ko: "교수명"
     role: "Principal Investigator"
     role_ko: "지도교수"
+    program: ""
     email: "prsg@example.edu"
     research_interests:
       - Photogrammetry
@@ -11,11 +12,14 @@ pi:
     photo: ""
     homepage: ""
     period: "Present"
+    status: "current"
+    group: "director"
 graduate_students:
   - name: "Graduate Student"
     name_ko: "대학원생"
     role: "M.S./Ph.D. Student"
     role_ko: "석사/박사과정"
+    program: "M.S./Ph.D."
     email: ""
     research_interests:
       - UAV mapping
@@ -23,26 +27,33 @@ graduate_students:
     photo: ""
     homepage: ""
     period: "Present"
+    status: "current"
+    group: "graduate"
 undergraduate_researchers:
   - name: "Undergraduate Researcher"
     name_ko: "학부연구생"
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
+    program: "B.S."
     email: ""
     research_interests:
       - Spatial data analysis
     photo: ""
     homepage: ""
     period: "Present"
+    status: "current"
+    group: "undergraduate"
 alumni:
   - name: "Alumni Name"
     name_ko: "졸업생"
     role: "Alumnus"
     role_ko: "졸업생"
+    program: ""
     email: ""
     research_interests:
       - Photogrammetry
     photo: ""
     homepage: ""
     period: "YYYY-YYYY"
-
+    status: "alumni"
+    group: "alumni"

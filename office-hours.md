@@ -6,29 +6,21 @@ permalink: /office-hours/
 alternate_url: /ko/office-hours/
 ---
 
+{% assign office = site.data.office_hours_en %}
+
 <section class="page wrap">
-  <h2>Office Hours</h2>
-  <div class="grid section">
-    <article class="card">
-      <h3>Office Location</h3>
-      <p>Office and building information to be added.</p>
-    </article>
-    <article class="card">
-      <h3>Office Hours</h3>
-      <p>Regular consultation hours will be posted here.</p>
-    </article>
-    <article class="card">
-      <h3>Appointment Policy</h3>
-      <p>Please contact the lab by email before visiting. Appointment details can be updated later.</p>
-    </article>
-    <article class="card">
-      <h3>Contact Email</h3>
-      <p><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
-    </article>
-  </div>
+  <h2>{{ office.title }}</h2>
+  {% for line in office.description %}
+    <p>{{ line }}</p>
+  {% endfor %}
+  <a class="booking-button" href="{{ office.booking.url }}" target="_blank" rel="noopener noreferrer">{{ office.booking.label }}</a>
+  <p class="muted">{{ office.booking.note }}</p>
   <div class="section">
-    <h3>Notes for Students</h3>
-    <p>Students interested in photogrammetry, remote sensing, GIS, UAV mapping, LiDAR, and 3D reconstruction are welcome to contact the lab with a brief introduction and research interests.</p>
+    <h3>{{ office.guidelines_title }}</h3>
+    <ol>
+      {% for item in office.guidelines %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
   </div>
 </section>
-

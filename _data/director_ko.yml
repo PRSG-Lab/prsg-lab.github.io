@@ -1,0 +1,38 @@
+name: "김남훈"
+name_en: "Namhoon Kim"
+title: "조교수"
+affiliation: "전북대학교 토목공학과"
+photo: ""
+email: "namhoon.kim@jbnu.ac.kr"
+tel: "+82-63-270-2430"
+links:
+  - label: "Google Scholar"
+    url: ""
+  - label: "ORCID"
+    url: ""
+  - label: "LinkedIn"
+    url: ""
+bio:
+  - "김남훈 교수는 현재 전북대학교 토목공학과에서 조교수로 재직 중입니다. 지표면 센서부터 우주 공간의 카메라 센서까지 다양한 영상 센서의 기하 모델링을 연구하고 있습니다."
+  - "주요 연구 관심사는 사진측량, 원격탐사, 지리공간정보 분석, 카메라 센서 기하모델링, LiDAR 포인트클라우드 처리, 컴퓨터 비전, 고품질 디지털 트윈을 위한 3차원 재구성입니다."
+academic_positions:
+  - "전북대학교 토목공학과 조교수 (2026.3. - 현재)"
+  - "육군사관학교 토목환경학과 부교수 (2024.10. - 2026.2.)"
+  - "육군사관학교 토목환경학과 조교수 (2021.8. - 2024.9.)"
+  - "강릉원주대학교 방재연구소 연구교수 (2021.6. - 2021.7.)"
+  - "연세대학교 산학협력단 박사후연구원 (2021.3. - 2021.5.)"
+professional_service:
+  - "전북개발공사 기술자문위원 (2026.6. - 현재)"
+  - "한국측량학회 이사 (2026.1. - 현재)"
+  - "한국측량학회 편집위원 (2024.1. - 현재)"
+  - "육군사관학교 토목환경학과 실험실 주임교수 (2021.8. - 2025.2.)"
+education:
+  - degree: "토목환경공학 박사"
+    institution: "연세대학교"
+    period: "2012 - 2021"
+    detail: "학위논문: Absolute Position/Orientation Estimation and Calibration Models without Initial Information for Smart City Sensors"
+  - degree: "토목환경공학 학사"
+    institution: "연세대학교"
+    period: "2008 - 2012"
+    detail: ""
+

@@ -7,8 +7,9 @@ alternate_url: /ko/people/
 ---
 
 <section class="page wrap">
-  <h2>People</h2>
-  {% assign groups = "pi:Principal Investigator,graduate_students:Graduate Students,undergraduate_researchers:Undergraduate Researchers,alumni:Alumni" | split: "," %}
+  <h2>Lab Members</h2>
+  <p class="muted">Director information is available on the <a href="{{ '/director/' | relative_url }}">Director</a> page.</p>
+  {% assign groups = "graduate_students:Graduate Students,undergraduate_researchers:Undergraduate Researchers,alumni:Alumni" | split: "," %}
   {% for group in groups %}
     {% assign parts = group | split: ":" %}
     {% assign key = parts[0] %}
@@ -20,7 +21,7 @@ alternate_url: /ko/people/
             <div class="avatar" aria-hidden="true"></div>
             <div>
               <h3>{{ person.name }}</h3>
-              <p class="meta">{{ person.role }}{% if person.period %} · {{ person.period }}{% endif %}</p>
+              <p class="meta">{{ person.role }}{% if person.program %} · {{ person.program }}{% endif %}{% if person.period %} · {{ person.period }}{% endif %}</p>
               {% if person.email %}<p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>{% endif %}
               <p class="muted">{{ person.research_interests | join: ", " }}</p>
             </div>
@@ -30,4 +31,3 @@ alternate_url: /ko/people/
     </div>
   {% endfor %}
 </section>
-

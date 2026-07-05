@@ -8,25 +8,28 @@ alternate_url: /ko/
 
 {% assign home = site.data.home_en %}
 
-<section class="hero">
-  <div>
-    <h2>{{ site.data.site.lab_short_name }}</h2>
-    <p>{{ home.intro }}</p>
-    <div class="section">
-      <h3>{{ home.pi_heading }}</h3>
-      <p>{{ home.pi_text }}</p>
-    </div>
-    <div class="section">
-      <h3>Research Keywords</h3>
-      <ul class="plain-list">
-        {% for keyword in home.keywords %}
-          <li>{{ keyword }}</li>
-        {% endfor %}
-      </ul>
-    </div>
+<section class="hero wrap">
+  <section class="home-hero-image">
+    {% if page.hero_image %}
+      <img src="{{ page.hero_image | relative_url }}" alt="PRSG Lab image">
+    {% else %}
+      <div class="image-placeholder" role="img" aria-label="Placeholder for lab, campus, or principal investigator image">Lab image placeholder</div>
+    {% endif %}
+  </section>
+
+  <h2>{{ site.data.site.lab_short_name }}</h2>
+  <p>{{ home.intro }}</p>
+  <div class="section">
+    <h3>{{ home.pi_heading }}</h3>
+    <p>{{ home.pi_text }}</p>
   </div>
-  <div class="placeholder-image" role="img" aria-label="Placeholder for lab, campus, or principal investigator image">
-    Lab image placeholder
+  <div class="section">
+    <h3>Research Keywords</h3>
+    <ul class="plain-list">
+      {% for keyword in home.keywords %}
+        <li>{{ keyword }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
@@ -42,4 +45,3 @@ alternate_url: /ko/
     {% endfor %}
   </div>
 </section>
-

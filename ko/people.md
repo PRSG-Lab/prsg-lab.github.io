@@ -7,8 +7,9 @@ alternate_url: /people/
 ---
 
 <section class="page wrap">
-  <h2>People</h2>
-  {% assign groups = "pi:지도교수,graduate_students:대학원생,undergraduate_researchers:학부연구생,alumni:졸업생" | split: "," %}
+  <h2>Lab Members</h2>
+  <p class="muted">Director 정보는 <a href="{{ '/ko/director/' | relative_url }}">Director</a> 페이지에서 확인할 수 있습니다.</p>
+  {% assign groups = "graduate_students:Graduate Students,undergraduate_researchers:Undergraduate Researchers,alumni:Alumni" | split: "," %}
   {% for group in groups %}
     {% assign parts = group | split: ":" %}
     {% assign key = parts[0] %}
@@ -20,7 +21,7 @@ alternate_url: /people/
             <div class="avatar" aria-hidden="true"></div>
             <div>
               <h3>{{ person.name_ko }}</h3>
-              <p class="meta">{{ person.role_ko }}{% if person.period %} · {{ person.period }}{% endif %}</p>
+              <p class="meta">{{ person.role_ko }}{% if person.program %} · {{ person.program }}{% endif %}{% if person.period %} · {{ person.period }}{% endif %}</p>
               {% if person.email %}<p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>{% endif %}
               <p class="muted">{{ person.research_interests | join: ", " }}</p>
             </div>
@@ -30,4 +31,3 @@ alternate_url: /people/
     </div>
   {% endfor %}
 </section>
-

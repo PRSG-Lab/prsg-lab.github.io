@@ -4,6 +4,13 @@
 - title: People
   url_en: /people/
   url_ko: /ko/people/
+  children:
+    - title: Director
+      url_en: /director/
+      url_ko: /ko/director/
+    - title: Lab Members
+      url_en: /people/
+      url_ko: /ko/people/
 - title: Research
   url_en: /research/
   url_ko: /ko/research/
@@ -19,4 +26,3 @@
 - title: Office Hours
   url_en: /office-hours/
   url_ko: /ko/office-hours/
-

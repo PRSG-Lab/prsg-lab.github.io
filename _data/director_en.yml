@@ -1,0 +1,38 @@
+name: "Namhoon Kim"
+name_ko: "김남훈"
+title: "Assistant Professor"
+affiliation: "Department of Civil Engineering, Jeonbuk National University"
+photo: ""
+email: "namhoon.kim@jbnu.ac.kr"
+tel: "+82-63-270-2430"
+links:
+  - label: "Google Scholar"
+    url: ""
+  - label: "ORCID"
+    url: ""
+  - label: "LinkedIn"
+    url: ""
+bio:
+  - "Namhoon Kim is currently serving as an Assistant Professor in the Department of Civil Engineering at Jeonbuk National University. He has specialized expertise in geometric modeling for a variety of camera sensors, from surface-based sensors to spaceborne camera systems."
+  - "His research interests include photogrammetry, remote sensing, geospatial data analysis, camera sensor geometry, LiDAR point cloud processing, computer vision, and 3D reconstruction for high-quality digital twins."
+academic_positions:
+  - "Assistant Professor, Jeonbuk National University (2026.3. - present)"
+  - "Associate Professor, Korea Military Academy (2024.10. - 2026.2.)"
+  - "Assistant Professor, Korea Military Academy (2021.8. - 2024.9.)"
+  - "Research Professor, Gangneung-Wonju National University (2021.6. - 2021.7.)"
+  - "Post-doctoral Researcher, Yonsei University (2021.3. - 2021.5.)"
+professional_service:
+  - "Advisory Committee Member, Jeonbuk Development Corporation (2026.6. - present)"
+  - "Board Member, Korean Society of Surveying, Geodesy, Photogrammetry and Cartography (2026.1. - present)"
+  - "Editor, Korean Society of Surveying, Geodesy, Photogrammetry and Cartography (2024.1. - present)"
+  - "Laboratory Supervisor Professor, Department of Civil and Environmental Engineering, Korea Military Academy (2021.8. - 2025.2.)"
+education:
+  - degree: "Ph.D. in Civil and Environmental Engineering"
+    institution: "Yonsei University"
+    period: "2012 - 2021"
+    detail: "Dissertation: Absolute Position/Orientation Estimation and Calibration Models without Initial Information for Smart City Sensors"
+  - degree: "B.S. in Civil and Environmental Engineering"
+    institution: "Yonsei University"
+    period: "2008 - 2012"
+    detail: ""
+

@@ -7,7 +7,7 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
-  <body>
+  <body class="lang-{{ page.lang | default: 'en' }}">
     <a class="skip-link" href="#main">Skip to content</a>
     {% include header.html %}
     {% include nav.html %}
@@ -17,4 +17,3 @@
     {% include footer.html %}
   </body>
 </html>
-

@@ -1,0 +1,16 @@
+title: "Office Hours"
+description:
+  - "아래 버튼을 눌러 25분 상담 시간을 예약해 주세요."
+  - "학생들은 Google Calendar 예약 페이지를 통해 상담 가능 시간을 예약할 수 있습니다."
+  - "예약 시 이름, 이메일, 연락 가능한 전화번호, 학번을 입력해 주세요."
+booking:
+  label: "Google Calendar를 통한 상담 예약"
+  url: "https://calendar.app.google/REPLACE_WITH_ACTUAL_BOOKING_URL"
+  note: "상담 예약 페이지가 새 창에서 열립니다."
+guidelines_title: "상담 예약 가이드라인"
+guidelines:
+  - "각 상담 시간은 25분입니다."
+  - "특별한 안내가 없는 한 한 시간대만 예약해 주세요."
+  - "예약 후 확인 이메일이 발송됩니다."
+  - "예약 변경 또는 취소는 확인 이메일을 통해 진행해 주세요."
+  - "예약 시간에 맞춰 도착해 주세요."

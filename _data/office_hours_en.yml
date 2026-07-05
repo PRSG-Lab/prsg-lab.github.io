@@ -1,0 +1,17 @@
+title: "Office Hours"
+description:
+  - "Schedule a 25-minute office hour session."
+  - "Students may reserve an available meeting time through the Google Calendar booking page."
+  - "Please provide your name, email, contact number, and student ID when making a reservation."
+booking:
+  label: "Book Office Hours"
+  url: "https://calendar.app.google/REPLACE_WITH_ACTUAL_BOOKING_URL"
+  note: "The booking page will open in a new window."
+guidelines_title: "Reservation Guidelines"
+guidelines:
+  - "Each advising session is 25 minutes."
+  - "Please book only one time slot unless otherwise instructed."
+  - "A confirmation email will be sent after booking."
+  - "Appointment changes or cancellations should be made through the confirmation email."
+  - "Please arrive on time for your scheduled session."
+
