@@ -83,6 +83,7 @@ a:focus {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .header-branding {
@@ -359,7 +360,7 @@ a:focus {
   margin-bottom: 1.25rem;
   color: var(--navy);
   font-size: clamp(1.6rem, 3.5vw, 2.75rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.02em;
   text-transform: uppercase;
