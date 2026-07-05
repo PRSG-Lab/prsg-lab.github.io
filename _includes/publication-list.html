@@ -1,0 +1,70 @@
+{% assign publications = site.data.publications | where_exp: "pub", "pub.type == 'journal' or pub.type == 'article'" | sort: "year" | reverse %}
+{% assign publication_years = publications | map: "year" | uniq %}
+
+<div class="publication-list">
+  {% for year in publication_years %}
+    <section class="publication-year-section">
+      <h2 class="publication-year">{{ year }}</h2>
+      <ul class="publication-items">
+        {% assign pubs_by_year = publications | where: "year", year %}
+        {% for pub in pubs_by_year %}
+          {% assign journal = pub.journal | default: pub.venue %}
+          {% assign issue = pub.issue | default: pub.number %}
+          {% assign link = pub.link | default: pub.url %}
+          {% assign title = pub.title | strip %}
+          {% assign title_last = title | slice: -1 %}
+
+          <li class="publication-item">
+            <span class="publication-authors">
+              {% if pub.authors.first.name %}
+                {% for author in pub.authors %}
+                  {% assign author_name = author.name %}
+                  {% if page.lang == "ko" and author.name_ko %}
+                    {% assign author_name = author.name_ko %}
+                  {% endif %}
+
+                  {% assign is_highlight = false %}
+                  {% if author.highlight %}
+                    {% assign is_highlight = true %}
+                  {% endif %}
+                  {% if author_name == "Namhoon Kim" or author_name == "Nam Hoon Kim" or author_name == "김남훈" %}
+                    {% assign is_highlight = true %}
+                  {% endif %}
+
+                  {% if is_highlight %}<strong>{{ author_name }}</strong>{% else %}{{ author_name }}{% endif %}{% if author.corresponding %}<sup>*</sup>{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %}{% if forloop.length > 2 %}, {% endif %}&amp; {% else %}, {% endif %}{% endunless %}
+                {% endfor %}
+              {% else %}
+                {% assign authors_html = pub.authors | replace: "Namhoon Kim", "<strong>Namhoon Kim</strong>" | replace: "Nam Hoon Kim", "<strong>Nam Hoon Kim</strong>" | replace: "김남훈", "<strong>김남훈</strong>" %}
+                {{ authors_html }}
+              {% endif %}
+            </span>
+            <span class="publication-year-inline">({{ pub.year }}).</span>
+            <span class="publication-title">{{ title }}</span>{% unless title_last == "." or title_last == "?" or title_last == "!" %}.{% endunless %}
+            {% if journal %}
+              <em class="publication-journal">{{ journal }}</em>{% if pub.volume or pub.pages %},{% endif %}
+            {% endif %}
+            {% if pub.volume %}
+              <span class="publication-volume">{{ pub.volume }}</span>{% if issue %}<span class="publication-issue">({{ issue }})</span>{% endif %}{% if pub.pages %},{% endif %}
+            {% endif %}
+            {% if pub.pages %}
+              <span class="publication-pages">{{ pub.pages }}</span>.
+            {% endif %}
+            {% unless journal or pub.volume or pub.pages %}.{% endunless %}
+            {% if pub.doi %}
+              {% assign doi_value = pub.doi | strip %}
+              {% if doi_value contains "http" %}
+                {% assign doi_url = doi_value %}
+              {% else %}
+                {% assign doi_url = "https://doi.org/" | append: doi_value %}
+              {% endif %}
+              <a class="publication-link" href="{{ doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a>
+            {% endif %}
+            {% if link %}
+              <a class="publication-link" href="{{ link }}" target="_blank" rel="noopener noreferrer">Link</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

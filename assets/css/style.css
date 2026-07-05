@@ -366,7 +366,6 @@ a:focus {
 
 .card,
 .person,
-.publication,
 .news-item,
 .project {
   background: var(--white);
@@ -478,7 +477,7 @@ a:focus {
 }
 
 .director-name {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.15;
 }
 
@@ -523,13 +522,65 @@ a:focus {
   font-weight: 700;
 }
 
+.publication-list {
+  margin-top: 1.5rem;
+}
+
+.publication-year-section {
+  margin-bottom: 2rem;
+}
+
+.publication-year {
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.publication-items {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.publication-item {
+  margin-bottom: 0.95rem;
+  line-height: 1.65;
+}
+
+.publication-item::marker {
+  color: var(--navy);
+}
+
+.publication-authors strong {
+  font-weight: 700;
+}
+
 .publication-authors sup {
   font-size: 0.75em;
   vertical-align: super;
 }
 
+.publication-journal,
+.publication-volume {
+  font-style: italic;
+}
+
+.publication-link {
+  margin-left: 0.5rem;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  white-space: nowrap;
+}
+
+.publication-link:hover,
+.publication-link:focus {
+  color: #0b1b2b;
+}
+
 .publication-note {
-  margin-top: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
   color: var(--muted);
   font-size: 0.95rem;
 }

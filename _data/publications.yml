@@ -3,14 +3,30 @@
 
 - authors:
     - name: "Namhoon Kim"
+    - name: "Joon-Hak Lee"
+    - name: "Jin-Ho Ahn"
+    - name: "Sang-Ho Baek"
+      corresponding: true
+  year: 2026
+  title: "M3C2-based deformation analysis of blast-resistant doors under explosive loads: A case study"
+  journal: "KSCE Journal of Civil Engineering"
+  volume: "30"
+  issue: "1"
+  pages: "100330"
+  doi: "10.1016/j.kscej.2025.100330"
+  link: "https://www.sciencedirect.com/science/article/pii/S1226798825004453"
+  type: "journal"
+- authors:
+    - name: "Namhoon Kim"
       corresponding: true
   year: 2025
   title: "RPC Correction Coefficient Extrapolation for KOMPSAT-3A Imagery in Inaccessible Regions"
-  venue: "Remote Sensing"
+  journal: "Remote Sensing"
   volume: "17"
-  pages: ""
+  issue: "19"
+  pages: "3332"
   doi: "10.3390/rs17193332"
-  url: "https://www.mdpi.com/2072-4292/17/19/3332"
+  link: "https://www.mdpi.com/2072-4292/17/19/3332"
   type: "journal"
 - authors:
     - name: "Namhoon Kim"
@@ -21,25 +37,12 @@
       corresponding: true
   year: 2025
   title: "Applicability of the Geospatial Segment Anything Model for Reservoir Extraction Using KOMPSAT-3/3A Satellite Imagery."
-  venue: "Sensors \\& Materials"
+  journal: "Sensors & Materials"
   volume: "37"
+  issue: ""
   pages: ""
   doi: "10.18494/SAM5539"
-  url: "https://sensors.myu-group.co.jp/article.php?ss=5539"
-  type: "journal"
-- authors:
-    - name: "Namhoon Kim"
-    - name: "Joon-Hak Lee"
-    - name: "Jin-Ho Ahn"
-    - name: "Sang-Ho Baek"
-      corresponding: true
-  year: 2026
-  title: "M3C2-based deformation analysis of blast-resistant doors under explosive loads: A case study"
-  venue: "KSCE Journal of Civil Engineering"
-  volume: "30"
-  pages: "100330"
-  doi: "10.1016/j.kscej.2025.100330"
-  url: "https://www.sciencedirect.com/science/article/pii/S1226798825004453"
+  link: "https://sensors.myu-group.co.jp/article.php?ss=5539"
   type: "journal"
 - authors:
     - name: "Nguyen Hong Quang"
@@ -49,11 +52,12 @@
       corresponding: true
   year: 2024
   title: "Real-time flash flood detection employing the YOLOv8 model"
-  venue: "Earth Science Informatics"
+  journal: "Earth Science Informatics"
   volume: "17"
+  issue: "5"
   pages: "4809-4829"
   doi: "10.1007/s12145-024-01428-x"
-  url: "https://link.springer.com/article/10.1007/s12145-024-01428-x"
+  link: "https://link.springer.com/article/10.1007/s12145-024-01428-x"
   type: "journal"
 - authors:
     - name: "Suhong Yoo"
@@ -61,11 +65,12 @@
       corresponding: true
   year: 2023
   title: "Coarse Alignment Methodology of Point Cloud Based on Camera Position/Orientation Estimation Model"
-  venue: "Journal of Imaging"
+  journal: "Journal of Imaging"
   volume: "9"
-  pages: ""
+  issue: "12"
+  pages: "279"
   doi: "10.3390/jimaging9120279"
-  url: "https://www.mdpi.com/2313-433X/9/12/279"
+  link: "https://www.mdpi.com/2313-433X/9/12/279"
   type: "journal"
 - authors:
     - name: "Namhoon Kim"
@@ -74,11 +79,12 @@
       corresponding: true
   year: 2023
   title: "Absolute IOP/EOP Estimation Models without Initial Information of Various Smart City Sensors"
-  venue: "Sensors"
+  journal: "Sensors"
   volume: "23"
-  pages: ""
+  issue: "2"
+  pages: "742"
   doi: "10.3390/s23020742"
-  url: "https://www.mdpi.com/1424-8220/23/2/742"
+  link: "https://www.mdpi.com/1424-8220/23/2/742"
   type: "journal"
 - authors:
     - name: "Wonjun Choi"
@@ -90,11 +96,12 @@
       corresponding: true
   year: 2021
   title: "Creation of Actual CCTV Surveillance Map Using Point Cloud Acquired by Mobile Mapping System"
-  venue: "Korean Journal of Remote Sensing"
+  journal: "Korean Journal of Remote Sensing"
   volume: "37"
+  issue: "5"
   pages: "1361-1371"
   doi: "10.7780/kjrs.2021.37.5.3.3"
-  url: "https://www.kjrs.org/journal/view.html?pn=related&uid=604&vmd=Full"
+  link: "https://www.kjrs.org/journal/view.html?pn=related&uid=604&vmd=Full"
   type: "journal"
 - authors:
     - name: "Namhoon Kim"
@@ -104,11 +111,12 @@
       corresponding: true
   year: 2020
   title: "Estimation and improvement in the geolocation accuracy of rational polynomial coefficients with minimum GCPs using KOMPSAT-3A"
-  venue: "GIScience \\& Remote Sensing"
+  journal: "GIScience & Remote Sensing"
   volume: "57"
+  issue: "6"
   pages: "719-734"
   doi: "10.1080/15481603.2020.1791499"
-  url: "https://doi.org/10.1080/15481603.2020.1791499"
+  link: "https://doi.org/10.1080/15481603.2020.1791499"
   type: "journal"
 - authors:
     - name: "Namhoon Kim"
@@ -119,25 +127,27 @@
       corresponding: true
   year: 2020
   title: "Object Distance Estimation Using a Single Image Taken from a Moving Rolling Shutter Camera"
-  venue: "Sensors"
+  journal: "Sensors"
   volume: "20"
-  pages: ""
+  issue: "14"
+  pages: "3860"
   doi: "10.3390/s20143860"
-  url: "https://www.mdpi.com/1424-8220/20/14/3860"
+  link: "https://www.mdpi.com/1424-8220/20/14/3860"
   type: "journal"
 - authors:
     - name: "Namhoon Kim"
-    - name: "\\Ji Sang\\ Lee"
-    - name: "\\Jun Su\\ Bae"
-    - name: "\\Hong Gyoo\\ Sohn"
+    - name: "Ji Sang Lee"
+    - name: "Jun Su Bae"
+    - name: "Hong Gyoo Sohn"
       corresponding: true
   year: 2019
   title: "Comparative analysis of exterior orientation parameters of smartphone images using quaternion-based SPR and PNP algorithms"
-  venue: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
+  journal: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
   volume: "37"
+  issue: "6"
   pages: "465-472"
   doi: "10.7848/ksgpc.2019.37.6.465"
-  url: ""
+  link: ""
   type: "journal"
 - authors:
     - name: "Mi-Kyeong Kim"
@@ -148,11 +158,12 @@
     - name: "Je-Sung Park"
   year: 2017
   title: "A New Recursive Filtering Method of Terrestrial Laser Scanning Data to Preserve Ground Surface Information in Steep-Slope Areas"
-  venue: "ISPRS International Journal of Geo-Information"
+  journal: "ISPRS International Journal of Geo-Information"
   volume: "6"
-  pages: ""
+  issue: "11"
+  pages: "359"
   doi: "10.3390/ijgi6110359"
-  url: "https://www.mdpi.com/2220-9964/6/11/359"
+  link: "https://www.mdpi.com/2220-9964/6/11/359"
   type: "journal"
 - authors:
     - name: "Nam Hoon Kim"
@@ -162,11 +173,12 @@
       corresponding: true
   year: 2016
   title: "A genetic algorithm to solve the optimum location problem for surveillance sensors"
-  venue: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
+  journal: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
   volume: "34"
+  issue: "6"
   pages: "547-557"
   doi: ""
-  url: ""
+  link: ""
   type: "journal"
 - authors:
     - name: "Seunghwan Hong"
@@ -176,9 +188,10 @@
       corresponding: true
   year: 2015
   title: "Water Area Extraction Using RADARSAT SAR Imagery Combined with Landsat Imagery and Terrain Information"
-  venue: "Sensors"
+  journal: "Sensors"
   volume: "15"
+  issue: "3"
   pages: "6652-6667"
   doi: "10.3390/s150306652"
-  url: "https://www.mdpi.com/1424-8220/15/3/6652"
+  link: "https://www.mdpi.com/1424-8220/15/3/6652"
   type: "journal"

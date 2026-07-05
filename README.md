@@ -30,7 +30,8 @@ Most repeated content is in `_data/`:
 - Director profile: `_data/director_en.yml`, `_data/director_ko.yml`
 - Research: `_data/research_en.yml`, `_data/research_ko.yml`
 - Projects: `_data/projects_en.yml`, `_data/projects_ko.yml`
-- Publications: `_data/publications.yml`
+- Publications source: `_data/publications.bib`
+- Publications generated data: `_data/publications.yml`
 - News detail pages: `_news_en/`, `_news_ko/`
 - Office Hours booking: `_data/office_hours_en.yml`, `_data/office_hours_ko.yml`
 - Opportunities: `_data/opportunities_en.yml`, `_data/opportunities_ko.yml`
@@ -141,7 +142,66 @@ Set `photo: "/assets/images/director.jpg"` after uploading the image. On desktop
 
 ## Publications
 
-Publication authors are structured as a list so corresponding authors can be marked:
+The Publications pages at `/publications/` and `/ko/publications/` display journal articles only. Entries with `type: "conference"`, `type: "patent"`, or `type: "report"` may remain in the data file for future use, but they are not rendered on the current Publications page.
+
+Publications can be maintained from BibTeX. Edit:
+
+`_data/publications.bib`
+
+Then run this command from the site root:
+
+```bash
+node scripts/bibtex-to-publications.js
+```
+
+To preview the converted YAML without overwriting `_data/publications.yml`, run:
+
+```bash
+node scripts/bibtex-to-publications.js _data/publications.bib -
+```
+
+The script regenerates:
+
+`_data/publications.yml`
+
+GitHub Pages reads `_data/publications.yml`, so the site remains compatible with the standard Jekyll build. Treat `_data/publications.bib` as the easier source file and `_data/publications.yml` as generated display data.
+
+A journal article entry in `_data/publications.yml` uses this structure:
+
+```yml
+- year: 2026
+  type: "journal"
+  authors:
+    - name: "Author A"
+    - name: "Namhoon Kim"
+      name_ko: "김남훈"
+      highlight: true
+      corresponding: true
+    - name: "Author C"
+  title: "Example paper title"
+  journal: "Journal Name"
+  volume: "12"
+  issue: "3"
+  pages: "45-60"
+  doi: "10.0000/example"
+  link: "https://example.com/paper"
+```
+
+The page groups journal articles by year, sorts recent years first, and renders each paper as a bullet item in an APA-like order: authors, year, title, journal, volume(issue), pages, DOI, and Link.
+
+To mark corresponding authors, add a custom BibTeX field:
+
+```bibtex
+corresponding = {Namhoon Kim}
+```
+
+or use 1-based author numbers:
+
+```bibtex
+corresponding = {2}
+```
+
+The generated YAML keeps publication authors structured as a list:
 
 ```yml
 authors:
@@ -151,7 +211,15 @@ authors:
   - name: "Author C"
 ```
 
-Any author with `corresponding: true` receives a superscript `*` on the Publications page. Multiple corresponding authors are supported by adding `corresponding: true` to more than one author. Publication entries are edited in `_data/publications.yml`.
+Any author with `corresponding: true` receives a superscript `*` on the Publications page. Multiple corresponding authors are supported by listing more than one name in the BibTeX `corresponding` field with `and`, for example `corresponding = {Namhoon Kim and Author C}`.
+
+`Namhoon Kim`, `Nam Hoon Kim`, and `김남훈` are automatically bolded on the Publications page. If another spelling should be highlighted, add `highlight: true` to that author in `_data/publications.yml`.
+
+DOI and external links are optional:
+
+- `doi: "10.xxxx/xxxxx"` becomes a `DOI` link using `https://doi.org/`.
+- `doi: "https://doi.org/10.xxxx/xxxxx"` is used as-is.
+- `link` may point to the publisher page, PDF, or project page and is rendered as `Link`.
 
 ## Office Hours Booking
 
