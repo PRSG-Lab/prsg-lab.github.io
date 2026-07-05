@@ -12,8 +12,8 @@ alternate_url: /director/
   <h2>Director</h2>
   <div class="director-profile">
     <div class="director-profile-text">
-      <h3>{{ director.name }}</h3>
-      <p class="meta">{{ director.title }}<br>{{ director.affiliation }}</p>
+      <h3 class="director-name">{{ director.name }}</h3>
+      <p class="meta">{{ director.title }}, {{ director.affiliation }}</p>
       {% for paragraph in director.bio %}
         <p>{{ paragraph }}</p>
       {% endfor %}
