@@ -1,13 +1,13 @@
 intro: "전북대학교 사진측량·원격탐사 및 지리정보 연구실(PRSG Lab)은 사진측량, 원격탐사, 지리공간정보 분석, 위성영상 기하, UAV 매핑, LiDAR 포인트클라우드 처리, 3차원 재구성 분야를 연구합니다."
-pi_heading: "Principal Investigator"
-pi_text: "교수 소개, 연구 관심분야, 연락처 정보를 이곳에 추가할 수 있습니다."
+pi_heading: ""
+pi_text: ""
 keywords:
-  - 사진측량
-  - 원격탐사
-  - 위성영상 기하
-  - UAV 매핑
-  - LiDAR 포인트클라우드
-  - 3차원 재구성
+  - Photogrammetry (사진측량)
+  - Remote sensing (원격탐측)
+  - Satellite image geometry (위성 기하)
+  - UAV mapping (UAV 매핑)
+  - Pointcloudmetry (포인트클라우드 처리)
+  - 3D reconstruction (3차원 재구성)
 contact_note: "전북대학교 토목공학과"
 location:
   title: "Location"
