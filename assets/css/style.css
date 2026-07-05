@@ -132,7 +132,7 @@ a:focus {
 .header-university-name {
   color: var(--navy);
   font-family: capita, "Times New Roman", "Courier New", serif;
-  font-size: 1.35rem;
+  font-size: 0.81rem;
   line-height: 1.1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -657,7 +657,7 @@ a:focus {
   }
 
   .header-university-name {
-    font-size: 0.95rem;
+    font-size: 0.57rem;
   }
 
   .site-title-link {
