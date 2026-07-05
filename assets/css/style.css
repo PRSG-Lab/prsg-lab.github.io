@@ -768,7 +768,7 @@ a:focus {
   }
 
   .site-title-link {
-    font-size: clamp(0.609rem, 2.94vw, 1.008rem);
+    font-size: clamp(1.218rem, 5.84vw, 2.016rem);
     line-height: 1;
   }
 
