@@ -35,12 +35,14 @@ show_hero_image: false
 
   <section class="home-section home-news">
     <h2>Recent News</h2>
+    {% assign recent_news = site.news_en | sort: "date" | reverse %}
     <div class="grid">
-      {% for item in site.data.news_en limit:3 %}
-        <article class="news-item">
-          <p class="meta">{{ item.date | date: "%B %-d, %Y" }}</p>
+      {% for item in recent_news limit:3 %}
+        <article class="news-item news-card">
+          <p class="news-date">{{ item.date | date: "%B %-d, %Y" }}</p>
           <h3>{{ item.title }}</h3>
-          <p>{{ item.content }}</p>
+          <p>{{ item.excerpt | strip_html | truncate: 130 }}</p>
+          <a class="read-more" href="{{ item.url | relative_url }}">Read more</a>
         </article>
       {% endfor %}
     </div>
@@ -48,10 +50,7 @@ show_hero_image: false
 
   <section class="home-section home-location">
     <h2>{{ home.location.title }}</h2>
-    <p class="location-address">
-      <span class="location-icon" aria-hidden="true">⌂</span>
-      <span>{{ home.location.address }}</span>
-    </p>
+    <p class="location-address">{{ home.location.address }}</p>
     <div class="map-embed">
       <iframe src="{{ home.location.map_embed_src }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>

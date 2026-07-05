@@ -11,6 +11,7 @@
   --accent: #8a6f38;
   --white: #ffffff;
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+  --font-nav: "Times New Roman", Times, serif;
 }
 
 * {
@@ -109,7 +110,7 @@ a:focus {
   place-items: center;
   border: 1px solid rgba(16, 38, 58, 0.28);
   color: var(--navy);
-  font-family: var(--font-sans);
+  font-family: var(--font-nav);
   font-size: 1.1rem;
   letter-spacing: 0.04em;
 }
@@ -130,7 +131,7 @@ a:focus {
 
 .header-university-name {
   color: var(--navy);
-  font-family: var(--font-sans);
+  font-family: var(--font-nav);
   font-size: 1.35rem;
   line-height: 1.1;
   letter-spacing: 0.04em;
@@ -156,7 +157,7 @@ a:focus {
 .site-title-link {
   display: block;
   color: var(--navy);
-  font-family: var(--font-sans);
+  font-family: var(--font-nav);
   font-size: clamp(1.4rem, 2.8vw, 2.94rem);
   font-weight: 400;
   line-height: 0.95;
@@ -209,6 +210,12 @@ a:focus {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.site-header,
+.site-header a,
+.header-branding,
+.header-title-block,
+.header-university-name,
+.site-title-link,
 .site-nav,
 .site-nav a,
 .nav-menu,
@@ -220,7 +227,7 @@ a:focus {
 .language-link,
 .lang-switch,
 .language-switcher {
-  font-family: var(--font-sans);
+  font-family: var(--font-nav);
   font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -366,6 +373,46 @@ a:focus {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 1rem;
+}
+
+.news-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.home-news .grid {
+  gap: 1.25rem;
+}
+
+.news-card {
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.news-date {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.45rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.news-detail .news-date {
+  margin-bottom: 0.5rem;
+}
+
+.news-body {
+  margin-top: 1.25rem;
+}
+
+.news-body p {
+  margin-bottom: 1rem;
 }
 
 .section {
@@ -587,17 +634,8 @@ a:focus {
 }
 
 .location-address {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
-}
-
-.location-icon {
-  color: var(--navy);
-  font-size: 1.5rem;
-  line-height: 1;
 }
 
 .map-embed {
@@ -758,8 +796,20 @@ a:focus {
   }
 
   .hamburger-icon {
-    font-size: 1.25rem;
-    line-height: 1;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .mobile-menu-toggle,
+  .mobile-menu-toggle span,
+  .nav-menu a,
+  .mobile-submenu-toggle,
+  .nav-submenu a,
+  .site-nav .nav-language {
+    font-family: var(--font-nav);
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
   }
 
   .nav-menu {
@@ -819,7 +869,7 @@ a:focus {
   }
 
   .nav-submenu a {
-    padding: 0.45rem 0 0.45rem 0.8rem;
+    padding: 0.65rem 0 0.65rem 1.25rem;
   }
 
   .site-nav .nav-language {
@@ -871,7 +921,11 @@ a:focus {
   }
 
   .location-address {
-    align-items: flex-start;
     font-size: 1rem;
+  }
+
+  .news-list,
+  .home-news .grid {
+    gap: 1rem;
   }
 }

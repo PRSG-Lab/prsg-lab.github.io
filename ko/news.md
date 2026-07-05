@@ -8,14 +8,15 @@ alternate_url: /news/
 
 <section class="page wrap">
   <h2>News</h2>
-  {% assign sorted_news = site.data.news_ko | sort: "date" | reverse %}
-  {% for item in sorted_news %}
-    <article class="news-item">
-      <p class="meta">{{ item.date | date: "%Y.%m.%d" }}</p>
-      <h3>{{ item.title }}</h3>
-      <p>{{ item.content }}</p>
-      {% if item.link %}<p><a href="{{ item.link }}">Read more</a></p>{% endif %}
-    </article>
-  {% endfor %}
+  {% assign sorted_news = site.news_ko | sort: "date" | reverse %}
+  <div class="news-list">
+    {% for item in sorted_news %}
+      <article class="news-item news-card">
+        <p class="news-date">{{ item.date | date: "%Y.%m.%d" }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.excerpt | strip_html | truncate: 160 }}</p>
+        <a class="read-more" href="{{ item.url | relative_url }}">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
 </section>
-

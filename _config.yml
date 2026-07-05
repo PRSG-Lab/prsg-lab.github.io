@@ -5,6 +5,13 @@ baseurl: ""
 url: ""
 markdown: kramdown
 permalink: pretty
+collections:
+  news_en:
+    output: true
+    permalink: /news/:name/
+  news_ko:
+    output: true
+    permalink: /ko/news/:name/
 exclude:
   - README.md
   - Gemfile

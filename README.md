@@ -31,12 +31,12 @@ Most repeated content is in `_data/`:
 - Research: `_data/research_en.yml`, `_data/research_ko.yml`
 - Projects: `_data/projects_en.yml`, `_data/projects_ko.yml`
 - Publications: `_data/publications.yml`
-- News: `_data/news_en.yml`, `_data/news_ko.yml`
+- News detail pages: `_news_en/`, `_news_ko/`
 - Office Hours booking: `_data/office_hours_en.yml`, `_data/office_hours_ko.yml`
 - Opportunities: `_data/opportunities_en.yml`, `_data/opportunities_ko.yml`
 - Site-wide lab information: `_data/site.yml`
 
-Add or edit YAML entries and Jekyll will rebuild the affected pages.
+Add or edit YAML entries and Markdown collection documents and Jekyll will rebuild the affected pages.
 
 ## Common Updates
 
@@ -46,7 +46,7 @@ Add or edit YAML entries and Jekyll will rebuild the affected pages.
 - Lab members: edit `_data/people.yml`. The `people.md` pages show Graduate Students, Undergraduate Researchers, and Alumni.
 - Projects: edit `_data/projects_en.yml` and `_data/projects_ko.yml`. Projects are grouped under `ongoing` and `completed`, and each `keywords` list renders as tags.
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
-- Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page.
+- Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page. The address is shown without an icon.
 
 ## Header Logo
 
@@ -102,6 +102,34 @@ The People dropdown keeps two child links:
 
 The mobile MENU button and People submenu button are rendered in `_includes/nav.html`. Their open/close behavior is implemented in `assets/js/main.js`. Mobile-only styling is in `assets/css/style.css` under the `@media (max-width: 720px)` block.
 
+## News
+
+News list pages are `news.md` and `ko/news.md`. Individual news detail pages are generated from Jekyll collections:
+
+- English news: `_news_en/`
+- Korean news: `_news_ko/`
+
+Add a new English news file such as `_news_en/2026-04-01-example-news.md`:
+
+```markdown
+---
+layout: news
+lang: en
+title: "Example news title"
+date: 2026-04-01
+alternate_url: /ko/news/2026-04-01-example-news/
+---
+
+Write the news body here.
+```
+
+Add the matching Korean page in `_news_ko/` with the same slug and reversed `alternate_url`. The collection URLs are configured in `_config.yml`:
+
+- English: `/news/:name/`
+- Korean: `/ko/news/:name/`
+
+Home Recent News and the News list both read from these collections. Each card links to its detail page with `Read more`.
+
 ## Director Page
 
 Director profile data, including the photo path, is managed in:
@@ -140,7 +168,7 @@ The Office Hours pages open the booking link in a new tab with `target="_blank"`
 
 ## Fonts
 
-Pretendard is imported at the top of `assets/css/style.css` and used as the default font for body text, headings, navigation, buttons, and form controls. The fallback stack is `-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif`.
+Pretendard is imported at the top of `assets/css/style.css` and used as the default font for body content, cards, news, publications, research, projects, office hours, opportunities, and forms. Header and navigation text intentionally use `"Times New Roman", Times, serif`. Mobile navigation font size is normalized in the `@media (max-width: 720px)` block.
 
 ## Add EN/KO Pages
 

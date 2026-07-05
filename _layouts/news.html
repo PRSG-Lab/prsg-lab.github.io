@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="page wrap news-detail">
+  <p class="news-date">
+    {% if page.lang == 'ko' %}
+      {{ page.date | date: "%Y.%m.%d" }}
+    {% else %}
+      {{ page.date | date: "%B %-d, %Y" }}
+    {% endif %}
+  </p>
+  <h2>{{ page.title }}</h2>
+
+  <div class="news-body">
+    {{ content }}
+  </div>
+
+  {% if page.lang == 'ko' %}
+    <p><a class="read-more" href="{{ '/ko/news/' | relative_url }}">Back to News</a></p>
+  {% else %}
+    <p><a class="read-more" href="{{ '/news/' | relative_url }}">Back to News</a></p>
+  {% endif %}
+</article>
+
