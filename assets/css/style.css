@@ -10,6 +10,7 @@
   --muted: #5c6873;
   --accent: #8a6f38;
   --white: #ffffff;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
 }
 
 * {
@@ -20,17 +21,15 @@ body {
   margin: 0;
   color: var(--text);
   background: #373535;
+  font-family: var(--font-sans);
   line-height: 1.65;
 }
 
-html[lang="en"] body,
-body.lang-en {
-  font-family: proximanova, Arial, Helvetica, sans-serif;
-}
-
-html[lang="ko"] body,
-body.lang-ko {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
 }
 
 a {
@@ -110,7 +109,7 @@ a:focus {
   place-items: center;
   border: 1px solid rgba(16, 38, 58, 0.28);
   color: var(--navy);
-  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-family: var(--font-sans);
   font-size: 1.1rem;
   letter-spacing: 0.04em;
 }
@@ -131,8 +130,8 @@ a:focus {
 
 .header-university-name {
   color: var(--navy);
-  font-family: capita, "Times New Roman", "Courier New", serif;
-  font-size: 0.81rem;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
   line-height: 1.1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -157,7 +156,7 @@ a:focus {
 .site-title-link {
   display: block;
   color: var(--navy);
-  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-family: var(--font-sans);
   font-size: clamp(1.4rem, 2.8vw, 2.94rem);
   font-weight: 400;
   line-height: 0.95;
@@ -216,10 +215,12 @@ a:focus {
 .nav-menu a,
 .nav-submenu,
 .nav-submenu a,
+.mobile-menu-toggle,
+.mobile-submenu-toggle,
 .language-link,
 .lang-switch,
 .language-switcher {
-  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -235,6 +236,19 @@ a:focus {
   flex-wrap: wrap;
   gap: 0.25rem 1rem;
   align-items: stretch;
+}
+
+.mobile-menu-toggle,
+.mobile-submenu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  align-items: stretch;
+  width: 100%;
 }
 
 .nav-item {
@@ -457,6 +471,17 @@ a:focus {
   font-weight: 700;
 }
 
+.publication-authors sup {
+  font-size: 0.75em;
+  vertical-align: super;
+}
+
+.publication-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .education-list {
   margin: 0;
   padding-left: 1.25rem;
@@ -543,6 +568,50 @@ a:focus {
 
 .opportunity-section li {
   margin-bottom: 0.45rem;
+}
+
+.home-section {
+  padding: 1.75rem 0;
+}
+
+.home-section + .home-section {
+  border-top: 1px solid #d1d5db;
+}
+
+.home-section:first-child {
+  padding-top: 0;
+}
+
+.home-section:last-child {
+  padding-bottom: 0;
+}
+
+.location-address {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.location-icon {
+  color: var(--navy);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.map-embed {
+  width: 100%;
+  aspect-ratio: 16 / 4.5;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .project-list {
@@ -657,7 +726,7 @@ a:focus {
   }
 
   .header-university-name {
-    font-size: 0.57rem;
+    font-size: 0.95rem;
   }
 
   .site-title-link {
@@ -670,23 +739,94 @@ a:focus {
   }
 
   .nav-inner {
-    gap: 0 0.8rem;
+    display: block;
+    gap: 0;
   }
 
-  .site-nav a {
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.85rem 0;
+    color: var(--white);
+    background: var(--navy);
+    border: 0;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .hamburger-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    width: 100%;
+    background: var(--navy);
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .site-nav a,
+  .mobile-submenu-toggle {
+    width: 100%;
     padding: 0.65rem 0;
+    color: var(--white);
+    background: transparent;
+    border: 0;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .has-submenu > .desktop-nav-link {
+    display: none;
+  }
+
+  .mobile-submenu-toggle {
+    display: block;
   }
 
   .nav-submenu {
     position: static;
-    display: block;
+    display: none;
     min-width: 100%;
     box-shadow: none;
+    border: 0;
     margin-bottom: 0.35rem;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-item:hover .nav-submenu,
+  .nav-item:focus-within .nav-submenu {
+    display: none;
+  }
+
+  .nav-submenu.is-open,
+  .nav-item.has-submenu.is-open .nav-submenu {
+    display: block;
   }
 
   .nav-submenu a {
     padding: 0.45rem 0 0.45rem 0.8rem;
+  }
+
+  .site-nav .nav-language {
+    width: 100%;
+    margin-left: 0;
+    padding: 0.65rem 0;
+    border: 0;
   }
 
   .home-hero-image img {
@@ -698,18 +838,23 @@ a:focus {
     padding: 1rem;
   }
 
-  .director-profile,
+  .director-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
   .person {
     grid-template-columns: 1fr;
   }
 
-  .director-profile-text,
-  .director-profile-photo {
-    order: initial;
+  .director-profile-text {
+    order: 0;
   }
 
   .director-profile-photo {
+    order: -1;
     max-width: 220px;
+    margin-bottom: 1rem;
   }
 
   .research-list-item {
@@ -718,5 +863,15 @@ a:focus {
 
   .research-image {
     max-width: 100%;
+  }
+
+  .map-embed {
+    aspect-ratio: 16 / 9;
+    min-height: 240px;
+  }
+
+  .location-address {
+    align-items: flex-start;
+    font-size: 1rem;
   }
 }

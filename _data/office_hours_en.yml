@@ -5,7 +5,7 @@ description:
   - "Please provide your name, email, contact number, and student ID when making a reservation."
 booking:
   label: "Book Office Hours"
-  url: "https://calendar.app.google/REPLACE_WITH_ACTUAL_BOOKING_URL"
+  url: "https://calendar.app.google/jVieuepEdrj5YuUo9"
   note: "The booking page will open in a new window."
 guidelines_title: "Reservation Guidelines"
 guidelines:
@@ -14,4 +14,3 @@ guidelines:
   - "A confirmation email will be sent after booking."
   - "Appointment changes or cancellations should be made through the confirmation email."
   - "Please arrive on time for your scheduled session."
-

@@ -1,4 +1,8 @@
-- authors: "Author A, Author B, and Author C"
+- authors:
+    - name: "Author A"
+    - name: "Namhoon Kim"
+      corresponding: true
+    - name: "Author C"
   year: 2026
   title: "Placeholder journal article on photogrammetry and geospatial analysis"
   venue: "Journal Name"
@@ -7,7 +11,9 @@
   doi: ""
   url: ""
   type: "journal"
-- authors: "Author A and Author B"
+- authors:
+    - name: "Author A"
+    - name: "Author B"
   year: 2025
   title: "Conference paper placeholder for UAV mapping"
   venue: "Conference Name"
@@ -16,7 +22,8 @@
   doi: ""
   url: ""
   type: "conference"
-- authors: "Author A"
+- authors:
+    - name: "Author A"
   year: 2024
   title: "Technical report placeholder"
   venue: "Institutional Report"

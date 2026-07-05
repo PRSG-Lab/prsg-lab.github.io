@@ -9,4 +9,7 @@ keywords:
   - LiDAR point clouds
   - 3D reconstruction
 contact_note: "Department of Civil Engineering, Jeonbuk National University"
-
+location:
+  title: "Location"
+  address: "전북특별자치도 전주시 덕진구 백제대로 567 전북대학교 공과대학 1호관 261"
+  map_embed_src: "https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357023583896c667%3A0xdd593d9476a8a90b!2z7KCE67aB64yA7ZWZ6rWQIO2GoOuqqeqzte2VmeqzvA!5e0!3m2!1sko!2skr!4v1783257804525!5m2!1sko!2skr"

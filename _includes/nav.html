@@ -1,42 +1,54 @@
 <nav class="site-nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
-    {% for item in site.data.navigation %}
-      {% assign target = item.url_en %}
-      {% if page.lang == 'ko' %}
-        {% assign target = item.url_ko %}
-      {% endif %}
-      {% assign is_current = false %}
-      {% if page.url == target %}
-        {% assign is_current = true %}
-      {% endif %}
-      {% if item.children %}
-        {% for child in item.children %}
-          {% assign child_target = child.url_en %}
-          {% if page.lang == 'ko' %}
-            {% assign child_target = child.url_ko %}
-          {% endif %}
-          {% if page.url == child_target %}
-            {% assign is_current = true %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-      <div class="nav-item{% if item.children %} has-submenu{% endif %}">
-        <a class="nav-link" href="{{ target | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
-        {% if item.children %}
-          <div class="nav-submenu" aria-label="{{ item.title }} submenu">
-            {% for child in item.children %}
-              {% assign child_target = child.url_en %}
-              {% if page.lang == 'ko' %}
-                {% assign child_target = child.url_ko %}
-              {% endif %}
-              <a href="{{ child_target | relative_url }}" {% if page.url == child_target %}aria-current="page"{% endif %}>{{ child.title }}</a>
-            {% endfor %}
-          </div>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="hamburger-icon" aria-hidden="true">☰</span>
+      <span>MENU</span>
+    </button>
+
+    <div id="primary-navigation" class="nav-menu">
+      {% for item in site.data.navigation %}
+        {% assign target = item.url_en %}
+        {% if page.lang == 'ko' %}
+          {% assign target = item.url_ko %}
         {% endif %}
-      </div>
-    {% endfor %}
-    <a class="language-link nav-language" href="{{ page.alternate_url | default: '/' | relative_url }}">
-      {% if page.lang == 'ko' %}EN{% else %}KO{% endif %}
-    </a>
+        {% assign is_current = false %}
+        {% if page.url == target %}
+          {% assign is_current = true %}
+        {% endif %}
+        {% if item.children %}
+          {% for child in item.children %}
+            {% assign child_target = child.url_en %}
+            {% if page.lang == 'ko' %}
+              {% assign child_target = child.url_ko %}
+            {% endif %}
+            {% if page.url == child_target %}
+              {% assign is_current = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <div class="nav-item{% if item.children %} has-submenu{% endif %}">
+          {% if item.children %}
+            <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">
+              {{ item.title }}
+            </button>
+          {% endif %}
+          <a class="nav-link desktop-nav-link" href="{{ target | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% if item.children %}
+            <div id="submenu-{{ forloop.index }}" class="nav-submenu" aria-label="{{ item.title }} submenu">
+              {% for child in item.children %}
+                {% assign child_target = child.url_en %}
+                {% if page.lang == 'ko' %}
+                  {% assign child_target = child.url_ko %}
+                {% endif %}
+                <a href="{{ child_target | relative_url }}" {% if page.url == child_target %}aria-current="page"{% endif %}>{{ child.title }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      <a class="language-link nav-language" href="{{ page.alternate_url | default: '/' | relative_url }}">
+        {% if page.lang == 'ko' %}EN{% else %}KO{% endif %}
+      </a>
+    </div>
   </div>
 </nav>
