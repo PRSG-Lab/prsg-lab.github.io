@@ -45,6 +45,22 @@
   link: "https://sensors.myu-group.co.jp/article.php?ss=5539"
   type: "journal"
 - authors:
+    - name: "박준열"
+    - name: "김현재"
+    - name: "남동민"
+    - name: "유수홍"
+    - name: "김남훈"
+    - name: "정재훈"
+  year: 2025
+  title: "복셀 기반 3D U-Net 을 활용한 대용량 포인트 클라우드의 시맨틱 세그멘테이션 기법 개발"
+  journal: "한국측량학회지"
+  volume: "43"
+  issue: "4"
+  pages: "437-447"
+  doi: "10.7848/ksgpc.2025.43.4.437"
+  link: ""
+  type: "journal"
+- authors:
     - name: "Nguyen Hong Quang"
     - name: "Hanna Lee"
     - name: "Namhoon Kim"
@@ -58,6 +74,19 @@
   pages: "4809-4829"
   doi: "10.1007/s12145-024-01428-x"
   link: "https://link.springer.com/article/10.1007/s12145-024-01428-x"
+  type: "journal"
+- authors:
+    - name: "김남훈"
+    - name: "전영준"
+    - name: "백상호"
+  year: 2024
+  title: "유형문화유산 3 차원 측량에서 저가 LiDAR 의 활용 가능성 평가"
+  journal: "한국측량학회지"
+  volume: "42"
+  issue: "3"
+  pages: "225-234"
+  doi: "10.7848/ksgpc.2024.42.3.225"
+  link: ""
   type: "journal"
 - authors:
     - name: "Suhong Yoo"
