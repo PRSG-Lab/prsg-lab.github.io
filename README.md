@@ -49,21 +49,20 @@ Add or edit YAML entries and Markdown collection documents and Jekyll will rebui
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
 - Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page. The address is shown without an icon.
 
-## Header Logo
+## Header Image
 
-The header expects the Jeonbuk National University logo at:
+The top header is rendered as one responsive image. Replace the header by uploading the desired image to:
 
-`assets/images/jbnu-logo.png`
+`assets/images/header.png`
 
-If you want to use another filename, update `_config.yml`:
+Recommended format: PNG. Recommended width: 1100 px or larger.
 
-```yml
-logo: /assets/images/jbnu-logo.png
-```
+The image is displayed at `width: 100%; height: auto;` inside the same site container used by the navigation and page content. Clicking the header image links to the current language home page:
 
-PNG or SVG is recommended. A transparent background works best, and either a horizontal or square logo can be used. After replacing the file and pushing to GitHub, GitHub Pages will rebuild the site and the new logo will appear in the header. If the image is missing, the header shows a simple JBNU fallback so the layout does not collapse.
+- English pages: `/`
+- Korean pages: `/ko/`
 
-The header university and lab names are rendered in `_includes/header.html`. The current header tagline is intentionally disabled; only the logo, `JEONBUK NATIONAL UNIVERSITY`, and `PHOTOGRAMMETRY, REMOTE SENSING AND GEOINFORMATICS LAB` are shown.
+The header markup is in `_includes/header.html`; styling is managed with `.header-image-container`, `.header-image-link`, and `.header-image` in `assets/css/style.css`.
 
 ## Research Images
 

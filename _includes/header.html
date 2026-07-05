@@ -1,20 +1,12 @@
 <header class="site-header">
-  <div class="wrap header-branding">
-    {% if page.lang == 'ko' %}
-      {% assign home_url = '/ko/' %}
-    {% else %}
-      {% assign home_url = '/' %}
-    {% endif %}
-    {% assign logo_path = site.logo | default: '/assets/images/jbnu-logo.png' %}
-    <a class="university-logo-link" href="{{ home_url | relative_url }}" aria-label="Go to home">
-      <span class="university-logo-fallback" hidden>JBNU</span>
-      <img class="university-logo" src="{{ logo_path | relative_url }}" alt="Jeonbuk National University logo" onerror="this.hidden=true;this.previousElementSibling.hidden=false">
+  {% if page.lang == 'ko' %}
+    {% assign home_url = '/ko/' %}
+  {% else %}
+    {% assign home_url = '/' %}
+  {% endif %}
+  <div class="site-container header-image-container">
+    <a class="header-image-link" href="{{ home_url | relative_url }}" aria-label="Go to home">
+      <img class="header-image" src="{{ '/assets/images/header.png' | relative_url }}" alt="Photogrammetry, Remote Sensing and Geoinformatics Lab, Jeonbuk National University">
     </a>
-    <div class="header-title-block">
-      <div class="header-university-name">JEONBUK NATIONAL UNIVERSITY</div>
-      <a class="site-title-link" href="{{ home_url | relative_url }}">
-        PHOTOGRAMMETRY, REMOTE SENSING AND GEOINFORMATICS LAB
-      </a>
-    </div>
   </div>
 </header>

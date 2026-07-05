@@ -17,7 +17,12 @@ show_hero_image: false
   {% endif %}
 
   <section class="home-section home-intro">
-    <h2>{{ site.data.site.lab_short_name }}</h2>
+    <h1 class="home-main-title">{{ site.data.site.lab_short_name }}</h1>
+    <div class="home-lab-fullname" aria-label="Photogrammetry, Remote Sensing and Geoinformatics Lab">
+      <span class="initial-highlight">P</span>HOTOGRAMMETRY,
+      <span class="initial-highlight">R</span>EMOTE <span class="initial-highlight">S</span>ENSING
+      AND <span class="initial-highlight">G</span>EOINFORMATICS LAB
+    </div>
     {% for paragraph in home.intro %}
       <p>{{ paragraph }}</p>
     {% endfor %}
