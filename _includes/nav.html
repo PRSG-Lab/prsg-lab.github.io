@@ -35,5 +35,8 @@
         {% endif %}
       </div>
     {% endfor %}
+    <a class="language-link nav-language" href="{{ page.alternate_url | default: '/' | relative_url }}">
+      {% if page.lang == 'ko' %}EN{% else %}KO{% endif %}
+    </a>
   </div>
 </nav>

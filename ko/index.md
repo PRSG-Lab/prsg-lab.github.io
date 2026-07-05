@@ -1,21 +1,20 @@
 ---
 layout: default
 lang: ko
-title: 홈
+title: Home
 permalink: /ko/
 alternate_url: /
+show_hero_image: false
 ---
 
 {% assign home = site.data.home_ko %}
 
 <section class="hero wrap">
-  <section class="home-hero-image">
-    {% if page.hero_image %}
+  {% if page.show_hero_image and page.hero_image %}
+    <section class="home-hero-image">
       <img src="{{ page.hero_image | relative_url }}" alt="PRSG Lab image">
-    {% else %}
-      <div class="image-placeholder" role="img" aria-label="연구실, 캠퍼스 또는 지도교수 사진 자리">Lab image placeholder</div>
-    {% endif %}
-  </section>
+    </section>
+  {% endif %}
 
   <h2>{{ site.data.site.lab_short_name }}</h2>
   <p>{{ home.intro }}</p>

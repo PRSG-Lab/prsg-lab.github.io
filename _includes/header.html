@@ -1,13 +1,20 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div>
+      {% if page.lang == 'ko' %}
+        {% assign home_url = '/ko/' %}
+      {% else %}
+        {% assign home_url = '/' %}
+      {% endif %}
       <p class="eyebrow">{{ site.data.site.university_en }}</p>
       <h1>
-        {% if page.lang == 'ko' %}
-          {{ site.data.site.lab_name_ko }}
-        {% else %}
-          {{ site.data.site.lab_name_en }}
-        {% endif %}
+        <a class="site-title-link" href="{{ home_url | relative_url }}">
+          {% if page.lang == 'ko' %}
+            {{ site.data.site.lab_name_ko }}
+          {% else %}
+            {{ site.data.site.lab_name_en }}
+          {% endif %}
+        </a>
       </h1>
       <p class="tagline">
         {% if page.lang == 'ko' %}
@@ -17,9 +24,5 @@
         {% endif %}
       </p>
     </div>
-    <a class="language-link" href="{{ page.alternate_url | default: '/' | relative_url }}">
-      {% if page.lang == 'ko' %}EN{% else %}KO{% endif %}
-    </a>
   </div>
 </header>
-

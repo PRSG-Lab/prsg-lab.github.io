@@ -1,11 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 :root {
-  --navy: #17324d;
-  --navy-dark: #0f2438;
+  --navy: #10263A;
+  --navy-dark: #071a2c;
   --steel: #4e6578;
   --line: #d8dee4;
-  --bg: #f4f6f8;
+  --bg: #373535;
   --text: #202932;
   --muted: #5c6873;
   --accent: #8a6f38;
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   color: var(--text);
-  background: var(--bg);
+  background: #373535;
   line-height: 1.65;
 }
 
@@ -65,9 +65,9 @@ a:focus {
 }
 
 .site-header {
-  background: linear-gradient(180deg, var(--navy), var(--navy-dark));
-  color: var(--white);
-  border-bottom: 4px solid var(--accent);
+  background: var(--white);
+  color: var(--navy);
+  border-bottom: 1px solid var(--line);
 }
 
 .header-inner {
@@ -80,7 +80,7 @@ a:focus {
 
 .eyebrow {
   margin: 0 0 0.35rem;
-  color: #d8e2eb;
+  color: var(--navy);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -91,22 +91,56 @@ a:focus {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   line-height: 1.18;
   letter-spacing: 0;
+  color: var(--navy);
+}
+
+.site-title-link {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.site-title-link:hover,
+.site-title-link:focus {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 
 .tagline {
   max-width: 760px;
   margin: 0.65rem 0 0;
-  color: #e8eef3;
+  color: var(--navy);
 }
 
 .language-link {
   flex: 0 0 auto;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(16, 38, 58, 0.45);
   border-radius: 4px;
-  color: var(--white);
+  color: var(--navy);
   text-decoration: none;
   font-weight: 700;
+}
+
+.language-link:hover,
+.language-link:focus {
+  color: var(--navy);
+  background: rgba(16, 38, 58, 0.06);
+}
+
+.site-nav .nav-language {
+  margin-left: auto;
+  align-self: center;
+  padding: 0.4rem 0.7rem;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.58);
+}
+
+.site-nav .nav-language:hover,
+.site-nav .nav-language:focus {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .site-nav,
@@ -122,8 +156,8 @@ a:focus {
 }
 
 .site-nav {
-  background: var(--white);
-  border-bottom: 1px solid var(--line);
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nav-inner {
@@ -141,7 +175,7 @@ a:focus {
 .nav-link {
   display: block;
   padding: 0.8rem 0.15rem;
-  color: var(--navy-dark);
+  color: var(--white);
   font-weight: 650;
   text-decoration: none;
   border-bottom: 3px solid transparent;
@@ -150,7 +184,9 @@ a:focus {
 .site-nav a[aria-current="page"],
 .site-nav a:hover,
 .site-nav a:focus {
-  border-bottom-color: var(--accent);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom-color: rgba(255, 255, 255, 0.72);
 }
 
 .nav-submenu {
@@ -159,9 +195,9 @@ a:focus {
   top: 100%;
   left: 0;
   min-width: 180px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 20px rgba(15, 36, 56, 0.12);
+  background: var(--navy);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
   z-index: 1000;
 }
 
@@ -172,6 +208,7 @@ a:focus {
 
 .nav-submenu a {
   padding: 0.7rem 1rem;
+  color: var(--white);
   white-space: nowrap;
   border-bottom: 0;
 }
@@ -179,15 +216,18 @@ a:focus {
 .nav-submenu a:hover,
 .nav-submenu a:focus,
 .nav-submenu a[aria-current="page"] {
-  background: #f4f6f8;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .site-main {
+  background: #373535;
   padding: 2rem 0 2.75rem;
 }
 
 .page,
-.hero {
+.hero,
+.site-main > .section.wrap {
   background: var(--white);
   border: 1px solid var(--line);
   padding: 1.5rem;
@@ -406,9 +446,14 @@ a:focus {
 
 .site-footer {
   padding: 1.5rem 0;
-  background: #26313b;
-  color: #e8ecef;
+  background: #373535;
+  color: var(--white);
   font-size: 0.92rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.site-footer a {
+  color: var(--white);
 }
 
 .site-footer p {

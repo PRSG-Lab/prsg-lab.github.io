@@ -4,18 +4,17 @@ lang: en
 title: Home
 permalink: /
 alternate_url: /ko/
+show_hero_image: false
 ---
 
 {% assign home = site.data.home_en %}
 
 <section class="hero wrap">
-  <section class="home-hero-image">
-    {% if page.hero_image %}
+  {% if page.show_hero_image and page.hero_image %}
+    <section class="home-hero-image">
       <img src="{{ page.hero_image | relative_url }}" alt="PRSG Lab image">
-    {% else %}
-      <div class="image-placeholder" role="img" aria-label="Placeholder for lab, campus, or principal investigator image">Lab image placeholder</div>
-    {% endif %}
-  </section>
+    </section>
+  {% endif %}
 
   <h2>{{ site.data.site.lab_short_name }}</h2>
   <p>{{ home.intro }}</p>
