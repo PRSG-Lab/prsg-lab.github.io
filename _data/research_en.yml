@@ -1,0 +1,25 @@
+- title: "Photogrammetry"
+  description: "Camera geometry, image orientation, dense matching, and measurement from imagery."
+  keywords: ["Camera calibration", "Bundle adjustment", "Image matching"]
+- title: "Remote Sensing"
+  description: "Analysis of satellite and airborne observations for environmental and infrastructure applications."
+  keywords: ["Multispectral imagery", "Change detection", "Earth observation"]
+- title: "Geoinformatics / GIS"
+  description: "Spatial databases, geospatial workflows, and map-based decision support."
+  keywords: ["GIS", "Spatial modeling", "Geospatial standards"]
+- title: "Satellite Image Geometry"
+  description: "Geometric modeling, correction, and validation of satellite imagery."
+  keywords: ["Sensor models", "Orthorectification", "Accuracy assessment"]
+- title: "UAV Mapping"
+  description: "Low-altitude image acquisition and mapping using unmanned aerial vehicles."
+  keywords: ["Flight planning", "Structure from motion", "Mapping accuracy"]
+- title: "LiDAR and Point Cloud Processing"
+  description: "Processing, registration, classification, and interpretation of 3D point clouds."
+  keywords: ["Registration", "Classification", "3D features"]
+- title: "3D Reconstruction"
+  description: "Reconstruction of terrain, buildings, and infrastructure from multi-source observations."
+  keywords: ["Surface modeling", "Reality capture", "Digital twins"]
+- title: "Spatial Data Analysis"
+  description: "Quantitative analysis of spatial patterns, uncertainty, and geospatial data quality."
+  keywords: ["Spatial statistics", "Uncertainty", "Data quality"]
+

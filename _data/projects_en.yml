@@ -1,0 +1,13 @@
+- title: "Placeholder Research Project"
+  period: "2026-2028"
+  funding_agency: "Funding agency to be added"
+  role: "Principal investigator"
+  description: "A concise project description can be added here."
+  status: "Ongoing"
+- title: "Completed Mapping Project"
+  period: "2023-2025"
+  funding_agency: "Funding agency to be added"
+  role: "Participating researcher"
+  description: "Summary of completed project outcomes can be added here."
+  status: "Completed"
+

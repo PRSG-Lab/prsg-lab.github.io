@@ -1,0 +1,12 @@
+intro: "The Photogrammetry, Remote Sensing and Geoinformatics Lab (PRSG Lab) at Jeonbuk National University conducts research on photogrammetry, remote sensing, geospatial data analysis, satellite image geometry, UAV mapping, LiDAR point cloud processing, and 3D reconstruction."
+pi_heading: "Principal Investigator"
+pi_text: "Professor profile, research interests, and contact information can be added here."
+keywords:
+  - Photogrammetry
+  - Remote sensing
+  - Satellite image geometry
+  - UAV mapping
+  - LiDAR point clouds
+  - 3D reconstruction
+contact_note: "Department of Civil Engineering, Jeonbuk National University"
+

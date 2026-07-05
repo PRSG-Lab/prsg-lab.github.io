@@ -1,0 +1,13 @@
+- title: "진행 중 연구과제"
+  period: "2026-2028"
+  funding_agency: "지원기관 입력 예정"
+  role: "연구책임자"
+  description: "과제의 핵심 목표와 내용을 이곳에 간단히 추가할 수 있습니다."
+  status: "진행 중"
+- title: "완료된 매핑 연구과제"
+  period: "2023-2025"
+  funding_agency: "지원기관 입력 예정"
+  role: "참여연구원"
+  description: "완료 과제의 주요 성과 요약을 이곳에 추가할 수 있습니다."
+  status: "완료"
+

@@ -1,0 +1,28 @@
+- authors: "Author A, Author B, and Author C"
+  year: 2026
+  title: "Placeholder journal article on photogrammetry and geospatial analysis"
+  venue: "Journal Name"
+  volume: "00"
+  pages: "1-10"
+  doi: ""
+  url: ""
+  type: "journal"
+- authors: "Author A and Author B"
+  year: 2025
+  title: "Conference paper placeholder for UAV mapping"
+  venue: "Conference Name"
+  volume: ""
+  pages: "100-105"
+  doi: ""
+  url: ""
+  type: "conference"
+- authors: "Author A"
+  year: 2024
+  title: "Technical report placeholder"
+  venue: "Institutional Report"
+  volume: ""
+  pages: ""
+  doi: ""
+  url: ""
+  type: "report"
+

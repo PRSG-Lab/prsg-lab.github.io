@@ -1,0 +1,48 @@
+pi:
+  - name: "Professor Name"
+    name_ko: "교수명"
+    role: "Principal Investigator"
+    role_ko: "지도교수"
+    email: "prsg@example.edu"
+    research_interests:
+      - Photogrammetry
+      - Remote sensing
+      - Geoinformatics
+    photo: ""
+    homepage: ""
+    period: "Present"
+graduate_students:
+  - name: "Graduate Student"
+    name_ko: "대학원생"
+    role: "M.S./Ph.D. Student"
+    role_ko: "석사/박사과정"
+    email: ""
+    research_interests:
+      - UAV mapping
+      - Point cloud processing
+    photo: ""
+    homepage: ""
+    period: "Present"
+undergraduate_researchers:
+  - name: "Undergraduate Researcher"
+    name_ko: "학부연구생"
+    role: "Undergraduate Researcher"
+    role_ko: "학부연구생"
+    email: ""
+    research_interests:
+      - Spatial data analysis
+    photo: ""
+    homepage: ""
+    period: "Present"
+alumni:
+  - name: "Alumni Name"
+    name_ko: "졸업생"
+    role: "Alumnus"
+    role_ko: "졸업생"
+    email: ""
+    research_interests:
+      - Photogrammetry
+    photo: ""
+    homepage: ""
+    period: "YYYY-YYYY"
+

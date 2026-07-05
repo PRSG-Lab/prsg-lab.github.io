@@ -1,0 +1,22 @@
+- title: Home
+  url_en: /
+  url_ko: /ko/
+- title: People
+  url_en: /people/
+  url_ko: /ko/people/
+- title: Research
+  url_en: /research/
+  url_ko: /ko/research/
+- title: Projects
+  url_en: /projects/
+  url_ko: /ko/projects/
+- title: Publications
+  url_en: /publications/
+  url_ko: /ko/publications/
+- title: News
+  url_en: /news/
+  url_ko: /ko/news/
+- title: Office Hours
+  url_en: /office-hours/
+  url_ko: /ko/office-hours/
+
