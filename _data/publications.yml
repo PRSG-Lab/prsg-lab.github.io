@@ -3,7 +3,7 @@
 
 - authors:
     - name: "Namhoon Kim"
-    corresponding: true
+      corresponding: true
   year: 2025
   title: "RPC Correction Coefficient Extrapolation for KOMPSAT-3A Imagery in Inaccessible Regions"
   venue: "Remote Sensing"
@@ -18,7 +18,7 @@
     - name: "Hanna Lee"
     - name: "Sumin Park"
     - name: "Gihong Kim"
-    corresponding: true
+      corresponding: true
   year: 2025
   title: "Applicability of the Geospatial Segment Anything Model for Reservoir Extraction Using KOMPSAT-3/3A Satellite Imagery."
   venue: "Sensors \\& Materials"
@@ -32,7 +32,7 @@
     - name: "Joon-Hak Lee"
     - name: "Jin-Ho Ahn"
     - name: "Sang-Ho Baek"
-    corresponding: true
+      corresponding: true
   year: 2026
   title: "M3C2-based deformation analysis of blast-resistant doors under explosive loads: A case study"
   venue: "KSCE Journal of Civil Engineering"
@@ -46,7 +46,7 @@
     - name: "Hanna Lee"
     - name: "Namhoon Kim"
     - name: "Gihong Kim"
-    corresponding: true
+      corresponding: true
   year: 2024
   title: "Real-time flash flood detection employing the YOLOv8 model"
   venue: "Earth Science Informatics"
@@ -58,7 +58,7 @@
 - authors:
     - name: "Suhong Yoo"
     - name: "Namhoon Kim"
-    corresponding: true
+      corresponding: true
   year: 2023
   title: "Coarse Alignment Methodology of Point Cloud Based on Camera Position/Orientation Estimation Model"
   venue: "Journal of Imaging"
@@ -71,7 +71,7 @@
     - name: "Namhoon Kim"
     - name: "Sangho Baek"
     - name: "Gihong Kim"
-    corresponding: true
+      corresponding: true
   year: 2023
   title: "Absolute IOP/EOP Estimation Models without Initial Information of Various Smart City Sensors"
   venue: "Sensors"
@@ -87,7 +87,7 @@
     - name: "Seunghwan Hong"
     - name: "Namhoon Kim"
     - name: "Hong-Gyoo Sohn"
-    corresponding: true
+      corresponding: true
   year: 2021
   title: "Creation of Actual CCTV Surveillance Map Using Point Cloud Acquired by Mobile Mapping System"
   venue: "Korean Journal of Remote Sensing"
@@ -101,7 +101,7 @@
     - name: "Yoonjo Choi"
     - name: "Junsu Bae"
     - name: "Hong-Gyoo Sohn"
-    corresponding: true
+      corresponding: true
   year: 2020
   title: "Estimation and improvement in the geolocation accuracy of rational polynomial coefficients with minimum GCPs using KOMPSAT-3A"
   venue: "GIScience \\& Remote Sensing"
@@ -116,7 +116,7 @@
     - name: "Cheolhwan Kim"
     - name: "Soyeon Park"
     - name: "Hong-Gyoo Sohn"
-    corresponding: true
+      corresponding: true
   year: 2020
   title: "Object Distance Estimation Using a Single Image Taken from a Moving Rolling Shutter Camera"
   venue: "Sensors"
@@ -130,7 +130,7 @@
     - name: "\\Ji Sang\\ Lee"
     - name: "\\Jun Su\\ Bae"
     - name: "\\Hong Gyoo\\ Sohn"
-    corresponding: true
+      corresponding: true
   year: 2019
   title: "Comparative analysis of exterior orientation parameters of smartphone images using quaternion-based SPR and PNP algorithms"
   venue: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
@@ -143,7 +143,7 @@
     - name: "Mi-Kyeong Kim"
     - name: "Sangpil Kim"
     - name: "Hong-Gyoo Sohn"
-    corresponding: true
+      corresponding: true
     - name: "Namhoon Kim"
     - name: "Je-Sung Park"
   year: 2017
@@ -159,7 +159,7 @@
     - name: "Sang Pil Kim"
     - name: "Mi Kyeong Kim"
     - name: "Hong Gyoo Sohn"
-    corresponding: true
+      corresponding: true
   year: 2016
   title: "A genetic algorithm to solve the optimum location problem for surveillance sensors"
   venue: "Journal of the Korean Society of Surveying, Geodesy, Photogrammetry and Cartography"
@@ -173,7 +173,7 @@
     - name: "Hyoseon Jang"
     - name: "Namhoon Kim"
     - name: "Hong-Gyoo Sohn"
-    corresponding: true
+      corresponding: true
   year: 2015
   title: "Water Area Extraction Using RADARSAT SAR Imagery Combined with Landsat Imagery and Terrain Information"
   venue: "Sensors"
