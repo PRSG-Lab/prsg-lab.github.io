@@ -477,6 +477,11 @@ a:focus {
   order: 1;
 }
 
+.director-name {
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+
 .director-profile-photo {
   order: 2;
 }
