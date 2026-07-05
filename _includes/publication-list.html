@@ -1,4 +1,4 @@
-{% assign publications = site.data.publications | where_exp: "pub", "pub.type == 'journal' or pub.type == 'article'" | sort: "year" | reverse %}
+{% assign publications = site.data.publications | where: "type", "journal" | sort: "year" | reverse %}
 {% assign publication_years = publications | map: "year" | uniq %}
 
 <div class="publication-list">
