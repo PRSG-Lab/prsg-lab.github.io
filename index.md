@@ -21,7 +21,7 @@ show_hero_image: false
     <div class="home-lab-fullname" aria-label="Photogrammetry, Remote Sensing and Geoinformatics Lab">
       <span class="initial-highlight">P</span>hotogrammetry,
       <span class="initial-highlight">R</span>emote <span class="initial-highlight">S</span>ensing
-      AND <span class="initial-highlight">G</span>eoinformatics LAB
+      and <span class="initial-highlight">G</span>eoinformatics LAB
     </div>
     {% for paragraph in home.intro %}
       <p>{{ paragraph }}</p>
