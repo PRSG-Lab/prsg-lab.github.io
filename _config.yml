@@ -1,5 +1,6 @@
 title: PRSG Lab
 description: Photogrammetry, Remote Sensing and Geoinformatics Lab at Jeonbuk National University
+logo: /assets/images/jbnu-logo.png
 baseurl: ""
 url: ""
 markdown: kramdown
@@ -8,4 +9,3 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-

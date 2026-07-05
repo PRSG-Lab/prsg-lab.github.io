@@ -1,28 +1,20 @@
 <header class="site-header">
-  <div class="wrap header-inner">
-    <div>
-      {% if page.lang == 'ko' %}
-        {% assign home_url = '/ko/' %}
-      {% else %}
-        {% assign home_url = '/' %}
-      {% endif %}
-      <p class="eyebrow">{{ site.data.site.university_en }}</p>
-      <h1>
-        <a class="site-title-link" href="{{ home_url | relative_url }}">
-          {% if page.lang == 'ko' %}
-            {{ site.data.site.lab_name_ko }}
-          {% else %}
-            {{ site.data.site.lab_name_en }}
-          {% endif %}
-        </a>
-      </h1>
-      <p class="tagline">
-        {% if page.lang == 'ko' %}
-          {{ site.data.site.tagline_ko }}
-        {% else %}
-          {{ site.data.site.tagline_en }}
-        {% endif %}
-      </p>
+  <div class="wrap header-branding">
+    {% if page.lang == 'ko' %}
+      {% assign home_url = '/ko/' %}
+    {% else %}
+      {% assign home_url = '/' %}
+    {% endif %}
+    {% assign logo_path = site.logo | default: '/assets/images/jbnu-logo.png' %}
+    <a class="university-logo-link" href="{{ home_url | relative_url }}" aria-label="Go to home">
+      <span class="university-logo-fallback" hidden>JBNU</span>
+      <img class="university-logo" src="{{ logo_path | relative_url }}" alt="Jeonbuk National University logo" onerror="this.hidden=true;this.previousElementSibling.hidden=false">
+    </a>
+    <div class="header-title-block">
+      <div class="header-university-name">JEONBUK NATIONAL UNIVERSITY</div>
+      <a class="site-title-link" href="{{ home_url | relative_url }}">
+        PHOTOGRAMMETRY, REMOTE SENSING AND GEOINFORMATICS LAB
+      </a>
     </div>
   </div>
 </header>

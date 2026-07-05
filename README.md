@@ -18,7 +18,7 @@ This is a static Jekyll site for the Photogrammetry, Remote Sensing and Geoinfor
 
 ## Edit Pages
 
-English pages are at the site root: `index.md`, `people.md`, `research.md`, `projects.md`, `publications.md`, `news.md`, and `office-hours.md`.
+English pages are at the site root: `index.md`, `people.md`, `research.md`, `projects.md`, `publications.md`, `news.md`, `office-hours.md`, and `opportunities.md`.
 
 The Director page is `director.md`. Korean pages are under `ko/` with matching filenames. Each page has `lang`, `title`, `permalink`, and `alternate_url` front matter for language switching.
 
@@ -33,6 +33,7 @@ Most repeated content is in `_data/`:
 - Publications: `_data/publications.yml`
 - News: `_data/news_en.yml`, `_data/news_ko.yml`
 - Office Hours booking: `_data/office_hours_en.yml`, `_data/office_hours_ko.yml`
+- Opportunities: `_data/opportunities_en.yml`, `_data/opportunities_ko.yml`
 - Site-wide lab information: `_data/site.yml`
 
 Add or edit YAML entries and Jekyll will rebuild the affected pages.
@@ -45,6 +46,58 @@ Add or edit YAML entries and Jekyll will rebuild the affected pages.
 - Lab members: edit `_data/people.yml`. The `people.md` pages show Graduate Students, Undergraduate Researchers, and Alumni.
 - Projects: edit `_data/projects_en.yml` and `_data/projects_ko.yml`. Projects are grouped under `ongoing` and `completed`, and each `keywords` list renders as tags.
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
+
+## Header Logo
+
+The header expects the Jeonbuk National University logo at:
+
+`assets/images/jbnu-logo.png`
+
+If you want to use another filename, update `_config.yml`:
+
+```yml
+logo: /assets/images/jbnu-logo.png
+```
+
+PNG or SVG is recommended. A transparent background works best, and either a horizontal or square logo can be used. After replacing the file and pushing to GitHub, GitHub Pages will rebuild the site and the new logo will appear in the header. If the image is missing, the header shows a simple JBNU fallback so the layout does not collapse.
+
+The header university and lab names are rendered in `_includes/header.html`. The current header tagline is intentionally disabled; only the logo, `JEONBUK NATIONAL UNIVERSITY`, and `PHOTOGRAMMETRY, REMOTE SENSING AND GEOINFORMATICS LAB` are shown.
+
+## Research Images
+
+Research images should be placed under:
+
+`assets/images/research/`
+
+Each image path is managed in:
+
+- `_data/research_en.yml`
+- `_data/research_ko.yml`
+
+If an image path is missing or an image fails to load, the Research page keeps a fixed image area and shows a simple placeholder.
+
+## Opportunities
+
+The Opportunities page is available at `/opportunities/` and `/ko/opportunities/`. Edit recruiting text, research areas, applicant guidance, preferred background, and contact instructions in:
+
+- `_data/opportunities_en.yml`
+- `_data/opportunities_ko.yml`
+
+## Navigation
+
+Navigation items are managed in `_data/navigation.yml`. The top-level menu order is:
+
+`Home | People | Research | Projects | Publications | News | Office Hours | Opportunities`
+
+The People top-level link now points to Director:
+
+- English: `/director/`
+- Korean: `/ko/director/`
+
+The People dropdown keeps two child links:
+
+- Director: `/director/`, `/ko/director/`
+- Lab Members: `/people/`, `/ko/people/`
 
 ## Add EN/KO Pages
 

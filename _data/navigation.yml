@@ -2,8 +2,8 @@
   url_en: /
   url_ko: /ko/
 - title: People
-  url_en: /people/
-  url_ko: /ko/people/
+  url_en: /director/
+  url_ko: /ko/director/
   children:
     - title: Director
       url_en: /director/
@@ -26,3 +26,6 @@
 - title: Office Hours
   url_en: /office-hours/
   url_ko: /ko/office-hours/
+- title: Opportunities
+  url_en: /opportunities/
+  url_ko: /ko/opportunities/

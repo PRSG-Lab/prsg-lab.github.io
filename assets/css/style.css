@@ -70,12 +70,72 @@ a:focus {
   border-bottom: 1px solid var(--line);
 }
 
+.header-branding {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+}
+
 .header-inner {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 2rem 0 1.75rem;
+}
+
+.university-logo-link {
+  flex: 0 0 auto;
+  width: 110px;
+  max-width: 22vw;
+  min-height: 78px;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.university-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.university-logo-fallback {
+  width: 100%;
+  min-height: 78px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(16, 38, 58, 0.28);
+  color: var(--navy);
+  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.university-logo[hidden],
+.university-logo-fallback[hidden],
+.research-image img[hidden],
+.research-image-placeholder[hidden] {
+  display: none;
+}
+
+.header-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.header-university-name {
+  color: var(--navy);
+  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .eyebrow {
@@ -95,7 +155,14 @@ a:focus {
 }
 
 .site-title-link {
+  display: block;
   color: var(--navy);
+  font-family: capita, "Times New Roman", "Courier New", serif;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -120,7 +187,7 @@ a:focus {
   border-radius: 4px;
   color: var(--navy);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .language-link:hover,
@@ -153,6 +220,9 @@ a:focus {
 .lang-switch,
 .language-switcher {
   font-family: capita, "Times New Roman", "Courier New", serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .site-nav {
@@ -176,7 +246,7 @@ a:focus {
   display: block;
   padding: 0.8rem 0.15rem;
   color: var(--white);
-  font-weight: 650;
+  font-weight: 400;
   text-decoration: none;
   border-bottom: 3px solid transparent;
 }
@@ -337,9 +407,17 @@ a:focus {
 
 .director-profile {
   display: grid;
-  grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 260px);
+  gap: 2rem;
   align-items: start;
+}
+
+.director-profile-text {
+  order: 1;
+}
+
+.director-profile-photo {
+  order: 2;
 }
 
 .director-photo,
@@ -377,6 +455,94 @@ a:focus {
   border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
+}
+
+.education-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.education-list li {
+  margin-bottom: 0.7rem;
+}
+
+.education-list span {
+  color: var(--muted);
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.research-list-item {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: start;
+}
+
+.research-list-item:first-child {
+  padding-top: 0;
+}
+
+.research-image img,
+.research-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  background: #eef2f7;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.research-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--navy);
+}
+
+.research-text p {
+  margin-top: 0;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.research-tag {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #1f2937;
+  font-size: 0.8rem;
+}
+
+.opportunity-section {
+  padding: 1.2rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.opportunity-section h3 {
+  margin-bottom: 0.6rem;
+  color: var(--navy);
+}
+
+.opportunity-section ul {
+  margin-top: 0;
+  padding-left: 1.25rem;
+}
+
+.opportunity-section li {
+  margin-bottom: 0.45rem;
 }
 
 .project-list {
@@ -468,9 +634,35 @@ a:focus {
     width: min(calc(100% - 28px), 1100px);
   }
 
-  .header-inner {
+  .header-inner,
+  .header-branding {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .header-branding {
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .university-logo-link {
+    width: 72px;
+    max-width: none;
+    min-height: 52px;
+  }
+
+  .university-logo-fallback {
+    min-height: 52px;
+    font-size: 0.8rem;
+  }
+
+  .header-university-name {
+    font-size: 0.95rem;
+  }
+
+  .site-title-link {
+    font-size: clamp(1.45rem, 7vw, 2.4rem);
+    line-height: 1;
   }
 
   .language-link {
@@ -509,5 +701,22 @@ a:focus {
   .director-profile,
   .person {
     grid-template-columns: 1fr;
+  }
+
+  .director-profile-text,
+  .director-profile-photo {
+    order: initial;
+  }
+
+  .director-profile-photo {
+    max-width: 220px;
+  }
+
+  .research-list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .research-image {
+    max-width: 100%;
   }
 }

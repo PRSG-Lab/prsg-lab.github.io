@@ -11,14 +11,7 @@ alternate_url: /director/
 <section class="page wrap">
   <h2>Director</h2>
   <div class="director-profile">
-    <div>
-      {% if director.photo %}
-        <img class="director-photo" src="{{ director.photo | relative_url }}" alt="{{ director.name }}">
-      {% else %}
-        <div class="director-photo-placeholder" role="img" aria-label="Director photo placeholder">Director photo</div>
-      {% endif %}
-    </div>
-    <div>
+    <div class="director-profile-text">
       <h3>{{ director.name }}</h3>
       <p class="meta">{{ director.title }}<br>{{ director.affiliation }}</p>
       {% for paragraph in director.bio %}
@@ -33,6 +26,13 @@ alternate_url: /director/
           {% endif %}
         {% endfor %}
       </div>
+    </div>
+    <div class="director-profile-photo">
+      {% if director.photo %}
+        <img class="director-photo" src="{{ director.photo | relative_url }}" alt="{{ director.name }}">
+      {% else %}
+        <div class="director-photo-placeholder" role="img" aria-label="Director photo placeholder">Director photo</div>
+      {% endif %}
     </div>
   </div>
 
@@ -56,11 +56,13 @@ alternate_url: /director/
 
   <div class="section">
     <h3>Education</h3>
-    {% for item in director.education %}
-      <article class="publication">
-        <p><strong>{{ item.degree }}</strong>, {{ item.institution }} ({{ item.period }})</p>
-        {% if item.detail %}<p class="muted">{{ item.detail }}</p>{% endif %}
-      </article>
-    {% endfor %}
+    <ul class="education-list">
+      {% for item in director.education %}
+        <li>
+          <strong>{{ item.degree }}</strong>, {{ item.institution }}, {{ item.period }}
+          {% if item.detail %}<br><span>{{ item.detail }}</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>

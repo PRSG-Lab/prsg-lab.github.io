@@ -1,0 +1,29 @@
+title: "Opportunities"
+intro:
+  - "The PRSG Lab welcomes motivated students and researchers interested in photogrammetry, remote sensing, geoinformatics, LiDAR point cloud processing, satellite image geometry, UAV mapping, and 3D reconstruction."
+  - "Prospective graduate students, undergraduate researchers, and visiting researchers are encouraged to contact the director with a brief statement of research interests and a CV."
+sections:
+  - heading: "Research Areas"
+    items:
+      - "Photogrammetry and camera sensor geometry"
+      - "Remote sensing image processing and interpretation"
+      - "Satellite image geometry, RPC modeling, and orthorectification"
+      - "UAV mapping and 3D reconstruction"
+      - "LiDAR and point cloud processing"
+      - "GIS and geospatial data analysis"
+      - "NeRF, Gaussian Splatting, and emerging 3D scene representation methods"
+  - heading: "Who Should Apply"
+    items:
+      - "Graduate students interested in geospatial data, photogrammetry, remote sensing, or computer vision"
+      - "Undergraduate students seeking research experience"
+      - "Researchers with experience in Python, MATLAB, GIS, image processing, point cloud processing, or 3D reconstruction"
+  - heading: "Preferred Background"
+    items:
+      - "Basic knowledge of surveying, photogrammetry, remote sensing, GIS, computer vision, or numerical analysis"
+      - "Programming experience in Python, MATLAB, C/C++, or related tools"
+      - "Interest in applied geospatial problems and rigorous quantitative analysis"
+  - heading: "How to Contact"
+    items:
+      - "Send an email with your CV, transcript if available, and a short description of your research interests."
+      - "Please describe which PRSG Lab research topic you are interested in and why."
+
