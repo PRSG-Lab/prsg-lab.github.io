@@ -18,7 +18,9 @@ show_hero_image: false
 
   <section class="home-section home-intro">
     <h2>{{ site.data.site.lab_short_name }}</h2>
-    <p>{{ home.intro }}</p>
+    {% for paragraph in home.intro %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
     {% if home.pi_heading or home.pi_text %}
       <div class="section">
         {% if home.pi_heading %}<h3>{{ home.pi_heading }}</h3>{% endif %}
