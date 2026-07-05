@@ -148,7 +148,7 @@ a:focus {
 
 .site-header h1 {
   margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(0.875rem, 2vw, 1.375rem);
   line-height: 1.18;
   letter-spacing: 0;
   color: var(--navy);
@@ -768,7 +768,7 @@ a:focus {
   }
 
   .site-title-link {
-    font-size: clamp(1.015rem, 4.9vw, 1.68rem);
+    font-size: clamp(0.609rem, 2.94vw, 1.008rem);
     line-height: 1;
   }
 
