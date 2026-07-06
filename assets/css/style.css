@@ -547,7 +547,10 @@ a:focus {
 }
 
 .member-card {
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1.25rem;
   margin: 0;
+  align-items: start;
 }
 
 .avatar {
@@ -557,6 +560,14 @@ a:focus {
   border: 1px solid var(--line);
 }
 
+.member-card .avatar {
+  width: 120px;
+  height: calc(120px * 1.33);
+  aspect-ratio: 1 / 1.33;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 .member-photo {
   display: block;
   object-fit: cover;
@@ -564,6 +575,7 @@ a:focus {
 
 .member-photo-placeholder {
   display: block;
+  aspect-ratio: 1 / 1.33;
 }
 
 .member-info {
@@ -574,6 +586,17 @@ a:focus {
   .member-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .person.member-card {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .member-card .avatar {
+    width: 100px;
+    height: calc(100px * 1.33);
+    aspect-ratio: 1 / 1.33;
   }
 }
 
