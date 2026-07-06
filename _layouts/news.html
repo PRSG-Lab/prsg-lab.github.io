@@ -13,6 +13,14 @@ layout: default
   {% assign detail_image = page.cover %}
 {% endif %}
 
+{% if page.gallery and page.gallery.size > 0 %}
+  {% assign gallery_images = page.gallery %}
+{% elsif page.images and page.images.size > 0 %}
+  {% assign gallery_images = page.images %}
+{% elsif page.photos and page.photos.size > 0 %}
+  {% assign gallery_images = page.photos %}
+{% endif %}
+
 <article class="page wrap news-detail">
   <p class="news-date">
     {% if page.lang == 'ko' %}
@@ -23,36 +31,57 @@ layout: default
   </p>
   <h2>{{ page.title }}</h2>
 
-  {% if detail_image and detail_image != "" %}
-    <figure class="news-hero-image">
-      <img src="{{ detail_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
-      {% if page.image_caption %}
-        <figcaption>{{ page.image_caption }}</figcaption>
+  {% if gallery_images and gallery_images.size > 0 %}
+    {% assign first_image = gallery_images | first %}
+    {% assign first_src = first_image.url | default: first_image.src | default: first_image.path | default: first_image.image | default: first_image %}
+    {% assign first_alt = first_image.alt | default: page.title %}
+    {% assign first_caption = first_image.caption %}
+
+    <section class="news-gallery" data-news-gallery>
+      <figure class="news-gallery-main">
+        <img class="news-gallery-main-image" src="{{ first_src | relative_url }}" alt="{{ first_alt }}" data-gallery-main-image>
+        {% if first_caption %}
+          <figcaption data-gallery-main-caption>{{ first_caption }}</figcaption>
+        {% else %}
+          <figcaption data-gallery-main-caption hidden></figcaption>
+        {% endif %}
+      </figure>
+
+      {% if gallery_images.size > 1 %}
+        <div class="news-gallery-thumbnails-wrap">
+          <button class="gallery-arrow gallery-arrow-prev" type="button" aria-label="Previous thumbnails" data-gallery-prev>&lt;</button>
+
+          <div class="news-gallery-thumbnails" data-gallery-thumbnails>
+            {% for image in gallery_images %}
+              {% assign gallery_src = image.url | default: image.src | default: image.path | default: image.image | default: image %}
+              {% assign gallery_alt = image.alt | default: page.title %}
+              {% assign gallery_caption = image.caption %}
+              {% if gallery_src and gallery_src != "" %}
+                <button class="news-gallery-thumb{% if forloop.first %} is-active{% endif %}" type="button" data-gallery-thumb data-gallery-src="{{ gallery_src | relative_url }}" data-gallery-alt="{{ gallery_alt | escape }}" data-gallery-caption="{{ gallery_caption | default: '' | escape }}" aria-label="Show image {{ forloop.index }}">
+                  <img src="{{ gallery_src | relative_url }}" alt="{{ gallery_alt }}">
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <button class="gallery-arrow gallery-arrow-next" type="button" aria-label="Next thumbnails" data-gallery-next>&gt;</button>
+        </div>
       {% endif %}
-    </figure>
+    </section>
+  {% elsif detail_image and detail_image != "" %}
+    <section class="news-gallery single-image">
+      <figure class="news-gallery-main">
+        <img class="news-gallery-main-image" src="{{ detail_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        {% if page.image_caption %}
+          <figcaption>{{ page.image_caption }}</figcaption>
+        {% endif %}
+      </figure>
+    </section>
   {% endif %}
 
   <div class="news-body">
     {{ content }}
   </div>
-
-  {% if page.images and page.images.size > 0 %}
-    <div class="news-gallery" aria-label="News image gallery">
-      {% for image in page.images %}
-        {% assign gallery_src = image.url | default: image.src | default: image.path | default: image.image | default: image %}
-        {% assign gallery_alt = image.alt | default: page.title %}
-        {% assign gallery_caption = image.caption %}
-        {% if gallery_src and gallery_src != "" %}
-          <figure class="news-gallery-item">
-            <img src="{{ gallery_src | relative_url }}" alt="{{ gallery_alt }}">
-            {% if gallery_caption %}
-              <figcaption>{{ gallery_caption }}</figcaption>
-            {% endif %}
-          </figure>
-        {% endif %}
-      {% endfor %}
-    </div>
-  {% endif %}
 
   {% if page.lang == 'ko' %}
     <p><a class="read-more" href="{{ '/ko/news/' | relative_url }}">Back to News</a></p>

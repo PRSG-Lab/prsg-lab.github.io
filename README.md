@@ -206,16 +206,14 @@ layout: news
 lang: en
 title: "Example news title"
 date: 2026-04-01
-image: /assets/images/news/example.jpg
+image: /assets/images/news/example/main.jpg
 image_alt: "Example news representative image"
 image_caption: "Optional caption for the representative image."
-images:
-  - url: /assets/images/news/example-1.jpg
-    alt: "First additional news image"
-    caption: "Optional caption for the first image."
-  - url: /assets/images/news/example-2.jpg
-    alt: "Second additional news image"
-    caption: "Optional caption for the second image."
+gallery:
+  - /assets/images/news/example/01.jpg
+  - /assets/images/news/example/02.jpg
+  - /assets/images/news/example/03.jpg
+  - /assets/images/news/example/04.jpg
 alternate_url: /ko/news/2026-04-01-example-news/
 ---
 
@@ -225,38 +223,44 @@ Write the news body here.
 Add the matching Korean page in `_news_ko/` with the same slug and reversed `alternate_url`. Use `image` for the standard news image field:
 
 ```yaml
-image: /assets/images/news/example.jpg
+image: /assets/images/news/example/main.jpg
 ```
 
-The `image` field is the representative image. It appears in Home Recent News, the News list preview, and the top of the news detail page. On the detail page, the representative image is shown at its full ratio without cropping.
+The `image` field is the representative image. It appears in Home Recent News and the News list preview. If no gallery is provided, the detail page uses this image as a single-image gallery.
 
-To add multiple images to a news detail page, use the `images` array:
+To add multiple images to a news detail page, use the standard `gallery` array:
 
 ```yaml
-images:
-  - url: /assets/images/news/example-1.jpg
+gallery:
+  - /assets/images/news/example/01.jpg
+  - /assets/images/news/example/02.jpg
+  - /assets/images/news/example/03.jpg
+  - /assets/images/news/example/04.jpg
+```
+
+Object entries are also supported when per-image alt text or captions are needed:
+
+```yaml
+gallery:
+  - url: /assets/images/news/example/01.jpg
     alt: "First image"
     caption: "Optional caption"
-  - url: /assets/images/news/example-2.jpg
+  - url: /assets/images/news/example/02.jpg
     alt: "Second image"
     caption: "Optional caption"
 ```
 
-Simple string entries are also supported:
-
-```yaml
-images:
-  - /assets/images/news/example-1.jpg
-  - /assets/images/news/example-2.jpg
-```
-
-Image field fallbacks are also supported in list previews and detail pages for older entries: `thumbnail`, `featured_image`, and `cover`.
+Gallery field fallbacks are supported for older entries: `images` and `photos`. Image field fallbacks are also supported in list previews and single-image detail pages for older entries: `thumbnail`, `featured_image`, and `cover`.
 
 News images should be uploaded to:
 
 `assets/images/news/`
 
-Recommended image size: 800 px wide or larger. A 4:3 or 16:9 ratio works best for list previews. The actual preview size is controlled by CSS, so large originals are scaled down. If the original ratio is different, `object-fit: cover` may crop the list preview slightly. Detail-page representative images and `images` gallery items are displayed without cropping.
+Recommended representative image size: 800 px wide or larger. Recommended gallery image size: 1200 px wide or larger. A 4:3 or 16:9 ratio works best for list previews. The actual preview size is controlled by CSS, so large originals are scaled down. If the original ratio is different, `object-fit: cover` may crop the list preview slightly.
+
+Home Recent News and the News list preview image is controlled by `.news-preview-image`, `.home-news-item`, and `.news-list-item` in `assets/css/style.css`. The preview is displayed at about 360 px wide on desktop, roughly twice the earlier 180 px preview size.
+
+The News detail gallery displays one large image at a time. The large image is centered at 70% of the content width on desktop and 100% on mobile. Thumbnails appear below the large image; about four thumbnails are visible on desktop, and the `<` / `>` buttons scroll the thumbnail strip. Thumbnail click and arrow behavior is implemented in `assets/js/main.js`.
 
 The collection URLs are configured in `_config.yml`:
 
@@ -278,6 +282,17 @@ Relevant CSS classes in `assets/css/style.css`:
 - `.news-title`
 - `.news-excerpt`
 - `.news-preview-image`
+- `.news-gallery`
+- `.news-gallery-main`
+- `.news-gallery-main-image`
+- `.news-gallery-thumbnails-wrap`
+- `.news-gallery-thumbnails`
+- `.news-gallery-thumb`
+- `.gallery-arrow`
+
+News gallery thumbnail interactions are implemented in:
+
+`assets/js/main.js`
 
 ## Director Page
 

@@ -6,7 +6,7 @@ date: 2026-07-06
 image: /assets/images/news/website-test.jpg
 image_alt: "Website test representative image"
 image_caption: "Representative image for this news."
-images:
+gallery:
   - url: /assets/images/news/website-test-1.png
     alt: "First additional image"
     caption: "First additional image caption."
