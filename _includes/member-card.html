@@ -1,0 +1,27 @@
+{% assign person = include.person %}
+{% assign display_name = person.name %}
+{% assign display_role = person.role %}
+{% if include.lang == 'ko' %}
+  {% assign display_name = person.name_ko | default: person.name %}
+  {% assign display_role = person.role_ko | default: person.role %}
+{% endif %}
+
+<article class="person member-card">
+  {% if person.photo and person.photo != "" %}
+    <img class="avatar member-photo" src="{{ person.photo | relative_url }}" alt="{{ display_name }}" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+    <div class="avatar member-photo-placeholder" hidden aria-hidden="true"></div>
+  {% else %}
+    <div class="avatar member-photo-placeholder" aria-hidden="true"></div>
+  {% endif %}
+  <div class="member-info">
+    <h3>{{ display_name }}</h3>
+    <p class="meta">
+      {{ display_role }}{% if person.program and person.program != "" %} &middot; {{ person.program }}{% endif %}{% if person.period and person.period != "" %} &middot; {{ person.period }}{% endif %}{% if person.current_position and person.current_position != "" %} &middot; {{ person.current_position }}{% endif %}
+    </p>
+    {% if person.email and person.email != "" %}<p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>{% endif %}
+    {% if person.homepage and person.homepage != "" %}<p><a href="{{ person.homepage }}" target="_blank" rel="noopener noreferrer">Homepage</a></p>{% endif %}
+    {% if person.research_interests and person.research_interests.size > 0 %}
+      <p class="muted">{{ person.research_interests | join: ", " }}</p>
+    {% endif %}
+  </div>
+</article>

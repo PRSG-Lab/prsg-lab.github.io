@@ -44,11 +44,51 @@ Add or edit YAML entries and Markdown collection documents and Jekyll will rebui
 - Google Calendar booking URL: edit `booking.url` in `_data/office_hours_en.yml` and `_data/office_hours_ko.yml`.
 - Director photo: add an image such as `assets/images/director.jpg`, then set `photo: "/assets/images/director.jpg"` in `_data/director_en.yml` and `_data/director_ko.yml`.
 - Director social links: edit the `links` list in `_data/director_en.yml` and `_data/director_ko.yml`. Empty URLs are hidden on the page.
-- Lab members: edit `_data/people.yml`. The `people.md` pages show Graduate Students, Undergraduate Researchers, and Alumni.
+- Lab members: edit `_data/people.yml`. The `people.md` pages show Research Staff, Graduate Students, Undergraduate Researchers, and Alumni. Empty sections are hidden.
 - Projects: edit `_data/projects_en.yml` and `_data/projects_ko.yml`. Projects are grouped under `ongoing` and `completed`, and each `keywords` list renders as tags. The section distinction is styled with `.project-status-section` and `.project-status-heading`.
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
 - Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page. The address is shown without an icon.
 - Home title and subtitle: edit the markup in `index.md` and `ko/index.md`. The Oswald Medium font, size, weight, and color are controlled by `.home-main-title`, `.home-lab-fullname`, and `.initial-highlight` in `assets/css/style.css`.
+
+## Lab Members
+
+Lab Members data is managed in:
+
+`_data/people.yml`
+
+The page sections render in this order:
+
+`Research Staff | Graduate Students | Undergraduate Researchers | Alumni`
+
+If a section has an empty array, such as `research_staff: []`, that section is hidden on the page. Add entries under the relevant array and the section appears automatically.
+
+Research Staff entries can use roles such as `Postdoctoral Researcher`, `Research Professor`, `Research Fellow`, `Researcher`, `M.S.-level Researcher`, or `Visiting Researcher`.
+
+Example Research Staff entry:
+
+```yml
+research_staff:
+  - name: "Example Name"
+    name_ko: "예시 이름"
+    role: "Postdoctoral Researcher"
+    role_ko: "박사후연구원"
+    program: ""
+    email: "example@jbnu.ac.kr"
+    research_interests:
+      - "LiDAR point cloud processing"
+      - "3D reconstruction"
+    photo: "/assets/images/people/example.jpg"
+    homepage: ""
+    period: "2026 - present"
+    status: "current"
+    group: "research_staff"
+```
+
+Graduate Students, Undergraduate Researchers, and Alumni use the same field structure. Profile photos should be placed under:
+
+`assets/images/people/`
+
+The Lab Members card layout is controlled by `.member-section`, `.member-grid`, `.member-card`, `.member-photo`, and `.member-info` in `assets/css/style.css`. On desktop, `.member-grid` displays two cards per row. On mobile, it displays one card per row.
 
 ## Header Image
 

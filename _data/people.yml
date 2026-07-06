@@ -15,37 +15,9 @@ pi:
     status: "current"
     group: "director"
 
-research_staff:
-#  - name: "Research staff"
-#    name_ko: "연구원"
-#    role: "Research Associates"
-#    role_ko: "연구원"
-#    program: "M.S."
-#    email: ""
-#    research_interests:
-#      - UAV mapping
-#      - Point cloud processing
-#    photo: ""
-#    homepage: ""
-#    period: "Present"
-#    status: "current"
-#    group: "graduate"
+research_staff: []
 
-graduate_students:
-#  - name: "Graduate Student"
-#    name_ko: "대학원생"
-#    role: "M.S./Ph.D. Student"
-#    role_ko: "석사/박사과정"
-#    program: "M.S./Ph.D."
-#    email: ""
-#    research_interests:
-#      - UAV mapping
-#      - Point cloud processing
-#    photo: ""
-#    homepage: ""
-#    period: "Present"
-#    status: "current"
-#    group: "graduate"
+graduate_students: []
 
 undergraduate_researchers:
   - name: "Seungho Kim"
@@ -53,7 +25,7 @@ undergraduate_researchers:
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
     program: "B.S."
-    email: ""
+    email: "youre4207@gmail.com"
     research_interests:
       - Geoinformatics
     photo: ""
@@ -66,7 +38,7 @@ undergraduate_researchers:
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
     program: "B.S."
-    email: ""
+    email: "202117668@jbnu.ac.kr"
     research_interests:
       - Geoinformatics
     photo: ""
@@ -79,7 +51,7 @@ undergraduate_researchers:
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
     program: "B.S."
-    email: ""
+    email: "limjieun5619@gmail.com"
     research_interests:
       - Geoinformatics
     photo: ""
@@ -87,17 +59,4 @@ undergraduate_researchers:
     status: "current"
     group: "undergraduate"
 
-alumni:
-#  - name: "Alumni Name"
-#    name_ko: "졸업생"
-#    role: "Alumnus"
-#    role_ko: "졸업생"
-#    program: ""
-#    email: ""
-#    research_interests:
-#      - Photogrammetry
-#    photo: ""
-#    homepage: ""
-#    period: "YYYY-YYYY"
-#    status: "alumni"
-#    group: "alumni"
+alumni: []

@@ -525,11 +525,56 @@ a:focus {
   gap: 1rem;
 }
 
+.member-section {
+  margin-top: 2rem;
+}
+
+.member-section + .member-section {
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.member-section h3 {
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.member-card {
+  margin: 0;
+}
+
 .avatar {
   width: 84px;
   height: 104px;
   background: #e6ebef;
   border: 1px solid var(--line);
+}
+
+.member-photo {
+  display: block;
+  object-fit: cover;
+}
+
+.member-photo-placeholder {
+  display: block;
+}
+
+.member-info {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 .director-profile {
