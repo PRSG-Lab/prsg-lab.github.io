@@ -206,18 +206,47 @@ layout: news
 lang: en
 title: "Example news title"
 date: 2026-04-01
+image: /assets/images/news/example.jpg
 alternate_url: /ko/news/2026-04-01-example-news/
 ---
 
 Write the news body here.
 ```
 
-Add the matching Korean page in `_news_ko/` with the same slug and reversed `alternate_url`. The collection URLs are configured in `_config.yml`:
+Add the matching Korean page in `_news_ko/` with the same slug and reversed `alternate_url`. Use `image` for the standard news image field:
+
+```yaml
+image: /assets/images/news/example.jpg
+```
+
+Image field fallbacks are also supported in list previews and detail pages for older entries: `thumbnail`, `featured_image`, and `cover`.
+
+News images should be uploaded to:
+
+`assets/images/news/`
+
+Recommended image size: 800 px wide or larger. A 4:3 or 16:9 ratio works best. The actual preview size is controlled by CSS, so large originals are scaled down. If the original ratio is different, `object-fit: cover` may crop the preview slightly.
+
+The collection URLs are configured in `_config.yml`:
 
 - English: `/news/:name/`
 - Korean: `/ko/news/:name/`
 
-Home Recent News and the News list both read from these collections. Each card links to its detail page with `Read more`.
+Home Recent News and the News list both read from these collections. Home shows the latest three items as a vertical list, not a grid. The News tab shows the full collection as a vertical list. Each item links to its detail page with the title and `Read more`.
+
+If a news entry has `image`, the preview image appears on the right side of the item in both Home Recent News and the News tab. If no image is provided, the item renders as a text-only list item without an empty image column.
+
+Relevant CSS classes in `assets/css/style.css`:
+
+- `.home-news-list`
+- `.home-news-item`
+- `.home-news-content`
+- `.news-list`
+- `.news-list-item`
+- `.news-list-content`
+- `.news-title`
+- `.news-excerpt`
+- `.news-preview-image`
 
 ## Director Page
 

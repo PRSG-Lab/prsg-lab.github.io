@@ -46,13 +46,30 @@ show_hero_image: false
   <section class="home-section home-news">
     <h2>Recent News</h2>
     {% assign recent_news = site.news_en | sort: "date" | reverse %}
-    <div class="grid">
+    <div class="home-news-list">
       {% for item in recent_news limit:3 %}
-        <article class="news-item news-card">
-          <p class="news-date">{{ item.date | date: "%B %-d, %Y" }}</p>
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.excerpt | strip_html | truncate: 130 }}</p>
-          <a class="read-more" href="{{ item.url | relative_url }}">Read more</a>
+        {% assign preview_image = "" %}
+        {% if item.image and item.image != "" %}
+          {% assign preview_image = item.image %}
+        {% elsif item.thumbnail and item.thumbnail != "" %}
+          {% assign preview_image = item.thumbnail %}
+        {% elsif item.featured_image and item.featured_image != "" %}
+          {% assign preview_image = item.featured_image %}
+        {% elsif item.cover and item.cover != "" %}
+          {% assign preview_image = item.cover %}
+        {% endif %}
+        <article class="home-news-item{% if preview_image and preview_image != "" %} has-image{% endif %}">
+          <div class="home-news-content">
+            <p class="news-date">{{ item.date | date: "%B %-d, %Y" }}</p>
+            <h3 class="news-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            <p class="news-excerpt">{{ item.excerpt | strip_html | truncate: 160 }}</p>
+            <a class="read-more" href="{{ item.url | relative_url }}">Read more</a>
+          </div>
+          {% if preview_image and preview_image != "" %}
+            <a class="news-preview-image" href="{{ item.url | relative_url }}" aria-label="{{ item.title }}">
+              <img src="{{ preview_image | relative_url }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
         </article>
       {% endfor %}
     </div>

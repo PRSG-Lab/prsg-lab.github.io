@@ -2,6 +2,17 @@
 layout: default
 ---
 
+{% assign detail_image = "" %}
+{% if page.image and page.image != "" %}
+  {% assign detail_image = page.image %}
+{% elsif page.thumbnail and page.thumbnail != "" %}
+  {% assign detail_image = page.thumbnail %}
+{% elsif page.featured_image and page.featured_image != "" %}
+  {% assign detail_image = page.featured_image %}
+{% elsif page.cover and page.cover != "" %}
+  {% assign detail_image = page.cover %}
+{% endif %}
+
 <article class="page wrap news-detail">
   <p class="news-date">
     {% if page.lang == 'ko' %}
@@ -12,9 +23,9 @@ layout: default
   </p>
   <h2>{{ page.title }}</h2>
 
-  {% if page.image %}
+  {% if detail_image and detail_image != "" %}
     <figure class="news-hero-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      <img src="{{ detail_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
       {% if page.image_caption %}
         <figcaption>{{ page.image_caption }}</figcaption>
       {% endif %}
