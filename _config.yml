@@ -14,5 +14,6 @@ collections:
     permalink: /ko/news/:name/
 exclude:
   - README.md
+  - README.ko.md
   - Gemfile
   - Gemfile.lock
