@@ -8,7 +8,6 @@ alternate_url: /ko/people/
 
 <section class="page wrap">
   <h2>Lab Members</h2>
-  <p class="muted">Director information is available on the <a href="{{ '/director/' | relative_url }}">Director</a> page.</p>
   {% assign groups = "graduate_students:Graduate Students,undergraduate_researchers:Undergraduate Researchers,alumni:Alumni" | split: "," %}
   {% for group in groups %}
     {% assign parts = group | split: ":" %}

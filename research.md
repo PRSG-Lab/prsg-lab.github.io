@@ -8,7 +8,6 @@ alternate_url: /ko/research/
 
 <section class="page wrap">
   <h2>Research</h2>
-  <p>PRSG Lab studies measurement, mapping, and interpretation methods for geospatial information from images, sensors, and spatial datasets.</p>
   <div class="research-list section">
     {% for area in site.data.research_en %}
       <section class="research-list-item">
