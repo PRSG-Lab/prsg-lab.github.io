@@ -5,12 +5,16 @@ intro:
 pi_heading: ""
 pi_text: ""
 keywords:
-  - Photogrammetry (사진측량)
-  - Remote sensing (원격탐측)
-  - Satellite image geometry (위성 기하)
-  - UAV mapping (UAV 매핑)
-  - Pointcloudmetry (포인트클라우드 처리)
-  - 3D reconstruction (3차원 재구성)
+  - Photogrammetry
+  - Remote sensing
+  - Satellite image geometry
+  - UAV mapping
+  - Pointcloudmetry
+  - 3D reconstruction
+  - Geoinformatics
+  - Data analytics
+  - 3D computer vision
+  - Image processing
 contact_note: "전북대학교 토목공학과"
 location:
   title: "Location"
