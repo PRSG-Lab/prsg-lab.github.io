@@ -88,7 +88,19 @@ Graduate Students, Undergraduate Researchers, and Alumni use the same field stru
 
 `assets/images/people/`
 
-The Lab Members card layout is controlled by `.member-section`, `.member-grid`, `.member-card`, `.member-photo`, and `.member-info` in `assets/css/style.css`. On desktop, `.member-grid` displays two cards per row. On mobile, it displays one card per row.
+Set each member photo path in `_data/people.yml`:
+
+```yml
+photo: "/assets/images/people/member-name.jpg"
+```
+
+Recommended member photo ratio:
+
+`width:height = 1:1.33`
+
+Recommended upload sizes are `600 x 800 px` or `900 x 1200 px`. The displayed card image size is controlled by CSS, so larger originals are scaled into the member photo area. If the original ratio is different, `object-fit: cover` may crop the image slightly. For the most natural result, crop member photos to the 1:1.33 ratio before uploading.
+
+The Lab Members card layout is controlled by `.member-section`, `.member-grid`, `.member-card`, `.member-photo`, `.member-photo-placeholder`, and `.member-info` in `assets/css/style.css`. On desktop, `.member-grid` displays two cards per row. On mobile, it displays one card per row. The member photo area uses a 1:1.33 ratio for both real photos and placeholders.
 
 ## Header Image
 
