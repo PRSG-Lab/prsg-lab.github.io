@@ -13,7 +13,9 @@ alternate_url: /ko/office-hours/
   {% for line in office.description %}
     <p>{{ line }}</p>
   {% endfor %}
-  <a class="booking-button" href="{{ office.booking.url }}" target="_blank" rel="noopener noreferrer">{{ office.booking.label }}</a>
+  <div class="booking-button-wrapper">
+    <a class="booking-button" href="{{ office.booking.url }}" target="_blank" rel="noopener noreferrer">{{ office.booking.label }}</a>
+  </div>
   <p class="muted">{{ office.booking.note }}</p>
   <div class="section">
     <h3>{{ office.guidelines_title }}</h3>

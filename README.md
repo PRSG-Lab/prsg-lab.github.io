@@ -45,10 +45,10 @@ Add or edit YAML entries and Markdown collection documents and Jekyll will rebui
 - Director photo: add an image such as `assets/images/director.jpg`, then set `photo: "/assets/images/director.jpg"` in `_data/director_en.yml` and `_data/director_ko.yml`.
 - Director social links: edit the `links` list in `_data/director_en.yml` and `_data/director_ko.yml`. Empty URLs are hidden on the page.
 - Lab members: edit `_data/people.yml`. The `people.md` pages show Graduate Students, Undergraduate Researchers, and Alumni.
-- Projects: edit `_data/projects_en.yml` and `_data/projects_ko.yml`. Projects are grouped under `ongoing` and `completed`, and each `keywords` list renders as tags.
+- Projects: edit `_data/projects_en.yml` and `_data/projects_ko.yml`. Projects are grouped under `ongoing` and `completed`, and each `keywords` list renders as tags. The section distinction is styled with `.project-status-section` and `.project-status-heading`.
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
 - Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page. The address is shown without an icon.
-- Home title and subtitle: edit the markup in `index.md` and `ko/index.md`. The size and color are controlled by `.home-main-title`, `.home-lab-fullname`, and `.initial-highlight` in `assets/css/style.css`.
+- Home title and subtitle: edit the markup in `index.md` and `ko/index.md`. The Oswald Medium font, size, weight, and color are controlled by `.home-main-title`, `.home-lab-fullname`, and `.initial-highlight` in `assets/css/style.css`.
 
 ## Header Image
 
@@ -77,6 +77,14 @@ Each image path is managed in:
 - `_data/research_ko.yml`
 
 If an image path is missing or an image fails to load, the Research page keeps a fixed image area and shows a simple placeholder.
+
+Research image display size is controlled in `assets/css/style.css`:
+
+- Desktop: `.research-list-item` uses a 220 px left column, and `.research-image` is 220 px wide.
+- Image ratio: `.research-image img` and `.research-image-placeholder` use `aspect-ratio: 4 / 3`, so the displayed size is approximately 220 px x 165 px on desktop.
+- Mobile: `.research-list-item` becomes one column and `.research-image` becomes `width: 100%`, so the image scales responsively inside the content container.
+- Original image size does not change the displayed box size; large images are scaled/cropped by CSS with `object-fit: cover`.
+- Recommended upload size: at least 800 x 600 px, preferably 4:3.
 
 ## Opportunities
 
@@ -234,9 +242,11 @@ Current URL:
 
 The Office Hours pages open the booking link in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
 
+The booking button is centered by `.booking-button-wrapper` in `assets/css/style.css`; the existing `.booking-button` class controls the button color, padding, and typography.
+
 ## Fonts
 
-Pretendard is imported at the top of `assets/css/style.css` and used as the default font for body content, cards, news, publications, research, projects, office hours, opportunities, and forms. Header and navigation text intentionally use `"Times New Roman", Times, serif`. Mobile navigation font size is normalized in the `@media (max-width: 720px)` block.
+Pretendard is imported at the top of `assets/css/style.css` and used as the default font for body content, cards, news, publications, research, projects, office hours, opportunities, and forms. Oswald Medium is imported for the Home `PRSG Lab` title and full lab subtitle only through `.home-main-title` and `.home-lab-fullname`. Header and navigation text intentionally use `"Times New Roman", Times, serif`. Mobile navigation font size is normalized in the `@media (max-width: 720px)` block.
 
 ## Add EN/KO Pages
 

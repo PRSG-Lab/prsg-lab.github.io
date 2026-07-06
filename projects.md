@@ -8,8 +8,8 @@ alternate_url: /ko/projects/
 
 <section class="page wrap">
   <h2>Projects</h2>
-  <div class="section">
-    <h3>Ongoing</h3>
+  <section class="project-status-section project-status-ongoing">
+    <h2 class="project-status-heading">Ongoing</h2>
     <div class="project-list">
       {% for project in site.data.projects_en.ongoing %}
         <article class="project-item">
@@ -24,9 +24,9 @@ alternate_url: /ko/projects/
         </article>
       {% endfor %}
     </div>
-  </div>
-  <div class="section">
-    <h3>Completed</h3>
+  </section>
+  <section class="project-status-section project-status-completed">
+    <h2 class="project-status-heading">Completed</h2>
     <div class="project-list">
       {% for project in site.data.projects_en.completed %}
         <article class="project-item">
@@ -41,5 +41,5 @@ alternate_url: /ko/projects/
         </article>
       {% endfor %}
     </div>
-  </div>
+  </section>
 </section>
