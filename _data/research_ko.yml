@@ -1,33 +1,29 @@
-- title: "사진측량"
+- title: "Photogrammetry (사진측량)"
   description: "영상 기반 카메라 기하, 영상 표정, 정밀 매칭 및 계측 기술을 연구합니다."
-  image: "/assets/images/research/photogrammetry.jpg"
+  image: "/assets/images/research/photogrammetry.png"
   keywords: ["카메라 보정", "번들 조정", "영상 매칭"]
-- title: "원격탐사"
+- title: "Remote Sensing (원격탐측)"
   description: "위성 및 항공 관측자료를 활용하여 환경과 사회기반시설 문제를 분석합니다."
-  image: "/assets/images/research/remote-sensing.jpg"
+  image: "/assets/images/research/remote-sensing.png"
   keywords: ["다중분광 영상", "변화탐지", "지구관측"]
-- title: "지리정보 / GIS"
-  description: "공간 데이터베이스, 지리공간 처리 흐름, 지도 기반 의사결정 지원을 다룹니다."
-  image: "/assets/images/research/geoinformatics.jpg"
-  keywords: ["GIS", "공간 모델링", "지리공간 표준"]
-- title: "위성영상 기하"
+- title: "Satellite Image Geometry (위성영상 기하)"
   description: "위성영상의 기하 모델링, 보정, 정확도 검증 방법을 연구합니다."
-  image: "/assets/images/research/satellite-image-geometry.jpg"
+  image: "/assets/images/research/satellite-image-geometry.png"
   keywords: ["센서 모델", "정사보정", "정확도 평가"]
-- title: "UAV 매핑"
+- title: "UAV Mapping (UAV 매핑)"
   description: "무인항공기 기반 저고도 영상 취득과 정밀 지도 제작을 연구합니다."
-  image: "/assets/images/research/uav-mapping.jpg"
+  image: "/assets/images/research/uav-mapping.png"
   keywords: ["비행계획", "SfM", "매핑 정확도"]
-- title: "LiDAR 및 포인트클라우드 처리"
+- title: "Pointcloudmetry (포인트 클라우드 처리)"
   description: "3차원 포인트클라우드의 정합, 분류, 해석 기술을 연구합니다."
-  image: "/assets/images/research/lidar-point-cloud.jpg"
+  image: "/assets/images/research/pointcloudmetry.png"
   keywords: ["정합", "분류", "3차원 특징"]
-- title: "3차원 재구성"
+- title: "3D Reconstruction (3차원 재구성)"
   description: "지형, 건물, 인프라를 다양한 관측자료로부터 3차원으로 재구성합니다."
-  image: "/assets/images/research/3d-reconstruction.jpg"
+  image: "/assets/images/research/3d-reconstruction.png"
   keywords: ["표면 모델링", "실감 복원", "디지털 트윈"]
-- title: "공간자료 분석"
+- title: "Spatial Data Analysis (공간자료 분석)"
   description: "공간 패턴, 불확실성, 지리공간 데이터 품질을 정량적으로 분석합니다."
-  image: "/assets/images/research/spatial-data-analysis.jpg"
+  image: "/assets/images/research/spatial-data-analysis.png"
   keywords: ["공간통계", "불확실성", "데이터 품질"]
 
