@@ -33,12 +33,7 @@ show_hero_image: false
       </div>
     {% endif %}
     <div class="section">
-      <h3>Research Keywords</h3>
-      <ul class="plain-list">
-        {% for keyword in home.keywords %}
-          <li>{{ keyword }}</li>
-        {% endfor %}
-      </ul>
+      <p><strong>Research Keywords:</strong> {{ home.keywords | join: ", " }}</p>
     </div>
   </section>
 
