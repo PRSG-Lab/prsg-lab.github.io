@@ -36,6 +36,24 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.images and page.images.size > 0 %}
+    <div class="news-gallery" aria-label="News image gallery">
+      {% for image in page.images %}
+        {% assign gallery_src = image.url | default: image.src | default: image.path | default: image.image | default: image %}
+        {% assign gallery_alt = image.alt | default: page.title %}
+        {% assign gallery_caption = image.caption %}
+        {% if gallery_src and gallery_src != "" %}
+          <figure class="news-gallery-item">
+            <img src="{{ gallery_src | relative_url }}" alt="{{ gallery_alt }}">
+            {% if gallery_caption %}
+              <figcaption>{{ gallery_caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
   {% if page.lang == 'ko' %}
     <p><a class="read-more" href="{{ '/ko/news/' | relative_url }}">Back to News</a></p>
   {% else %}

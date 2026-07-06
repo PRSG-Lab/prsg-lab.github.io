@@ -207,6 +207,15 @@ lang: en
 title: "Example news title"
 date: 2026-04-01
 image: /assets/images/news/example.jpg
+image_alt: "Example news representative image"
+image_caption: "Optional caption for the representative image."
+images:
+  - url: /assets/images/news/example-1.jpg
+    alt: "First additional news image"
+    caption: "Optional caption for the first image."
+  - url: /assets/images/news/example-2.jpg
+    alt: "Second additional news image"
+    caption: "Optional caption for the second image."
 alternate_url: /ko/news/2026-04-01-example-news/
 ---
 
@@ -219,13 +228,35 @@ Add the matching Korean page in `_news_ko/` with the same slug and reversed `alt
 image: /assets/images/news/example.jpg
 ```
 
+The `image` field is the representative image. It appears in Home Recent News, the News list preview, and the top of the news detail page. On the detail page, the representative image is shown at its full ratio without cropping.
+
+To add multiple images to a news detail page, use the `images` array:
+
+```yaml
+images:
+  - url: /assets/images/news/example-1.jpg
+    alt: "First image"
+    caption: "Optional caption"
+  - url: /assets/images/news/example-2.jpg
+    alt: "Second image"
+    caption: "Optional caption"
+```
+
+Simple string entries are also supported:
+
+```yaml
+images:
+  - /assets/images/news/example-1.jpg
+  - /assets/images/news/example-2.jpg
+```
+
 Image field fallbacks are also supported in list previews and detail pages for older entries: `thumbnail`, `featured_image`, and `cover`.
 
 News images should be uploaded to:
 
 `assets/images/news/`
 
-Recommended image size: 800 px wide or larger. A 4:3 or 16:9 ratio works best. The actual preview size is controlled by CSS, so large originals are scaled down. If the original ratio is different, `object-fit: cover` may crop the preview slightly.
+Recommended image size: 800 px wide or larger. A 4:3 or 16:9 ratio works best for list previews. The actual preview size is controlled by CSS, so large originals are scaled down. If the original ratio is different, `object-fit: cover` may crop the list preview slightly. Detail-page representative images and `images` gallery items are displayed without cropping.
 
 The collection URLs are configured in `_config.yml`:
 
