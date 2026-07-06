@@ -668,7 +668,7 @@ a:focus {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: #eef2f7;
+  background: #fff;
   border: 1px solid var(--line);
 }
 

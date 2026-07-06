@@ -1,28 +1,28 @@
 - title: "Photogrammetry"
-  description: "Camera geometry, image orientation, dense matching, and measurement from imagery."
+  description: "We study camera geometry, image orientation, precise matching, and metric measurement from imagery. Our work focuses on extracting reliable 3D position and shape information through camera calibration, bundle adjustment, and rigorous analysis of 2D–3D geometric relationships."
   image: "/assets/images/research/photogrammetry.png"
   keywords: ["Camera calibration", "Bundle adjustment", "Image matching"]
 - title: "Remote Sensing"
-  description: "Analysis of satellite and airborne observations for environmental and infrastructure applications."
+  description: "We analyze satellite and airborne observations to monitor surface environments, urban areas, and infrastructure systems. Our research uses multispectral and high-resolution imagery, change detection, and GeoAI-based image interpretation to enhance the quantitative use of Earth observation data."
   image: "/assets/images/research/remote-sensing.png"
   keywords: ["Multispectral imagery", "Change detection", "Earth observation"]
 - title: "Satellite Image Geometry"
-  description: "Geometric modeling, correction, and validation of satellite imagery."
+  description: "We study sensor models, RPC/RFM, orthorectification, and geometric accuracy assessment for satellite imagery. By combining physical sensor modeling and mathematical correction models, we analyze geometric errors and develop reliable workflows for high-accuracy geospatial data generation."
   image: "/assets/images/research/satellite-image-geometry.png"
   keywords: ["Sensor models", "Orthorectification", "Accuracy assessment"]
 - title: "UAV Mapping"
-  description: "Low-altitude image acquisition and mapping using unmanned aerial vehicles."
+  description: "We investigate low-altitude image acquisition, flight planning, SfM-based 3D reconstruction, orthomosaic generation, and mapping accuracy assessment using unmanned aerial vehicles. UAV imagery is used for precise local mapping, infrastructure monitoring, and terrain and object modeling."
   image: "/assets/images/research/uav-mapping.png"
   keywords: ["Flight planning", "Structure from motion", "Mapping accuracy"]
 - title: "Pointcloudmetry"
-  description: "Processing, registration, classification, and interpretation of 3D point clouds."
+  description: "We study the registration, classification, change detection, and geometric interpretation of 3D point clouds acquired from LiDAR, TLS, MMS, UAV, and photogrammetric sources. Our research quantitatively evaluates point cloud accuracy, density, surface characteristics, and uncertainty for terrain, infrastructure, and urban analysis."
   image: "/assets/images/research/pointcloudmetry.png"
   keywords: ["Registration", "Classification", "3D features"]
 - title: "3D Reconstruction"
-  description: "Reconstruction of terrain, buildings, and infrastructure from multi-source observations."
+  description: "We develop methods for reconstructing the 3D geometry and surface structure of terrain, buildings, and infrastructure from images, point clouds, LiDAR, and other spatial observations. Our research covers both conventional and emerging 3D scene representation methods, including SfM, MVS, NeRF, and 3D Gaussian Splatting."
   image: "/assets/images/research/3d-reconstruction.png"
   keywords: ["Surface modeling", "Reality capture", "Digital twins"]
 - title: "Spatial Data Analysis"
-  description: "Quantitative analysis of spatial patterns, uncertainty, and geospatial data quality."
+  description: "We study quantitative methods for analyzing spatial patterns, positional accuracy, uncertainty, and geospatial data quality. By integrating GIS, spatial statistics, and geospatial data fusion, we improve the interpretability and practical utility of surveying, remote sensing, and 3D spatial datasets."
   image: "/assets/images/research/spatial-data-analysis.png"
   keywords: ["Spatial statistics", "Uncertainty", "Data quality"]
