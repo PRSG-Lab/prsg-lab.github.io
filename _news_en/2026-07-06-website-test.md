@@ -4,20 +4,16 @@ lang: en
 title: "Website Test News"
 date: 2026-07-06
 image: /assets/images/news/website-test.jpg
-image_alt: "PRSG Lab website test image"
-image_caption: "Example image for testing news preview and detail page display."
+image_alt: "Website test representative image"
+image_caption: "Representative image for this news."
+images:
+  - url: /assets/images/news/website-test-1.png
+    alt: "First additional image"
+    caption: "First additional image caption."
+  - url: /assets/images/news/website-test-2.jpg
+    alt: "Second additional image"
+    caption: "Second additional image caption."
 alternate_url: /ko/news/2026-07-06-website-test/
 ---
 
-This is a test news post for checking image display on the PRSG Lab website.
-
-The image specified in the front matter should appear in three places:
-
-- On the Home page Recent News list
-- On the News page list
-- At the top of this news detail page
-
-Upload the image file here:
-
-```text
-assets/images/news/website-test.jpg
+News body text here.
