@@ -14,46 +14,90 @@ pi:
     period: "Present"
     status: "current"
     group: "director"
+
+research_staff:
+#  - name: "Research staff"
+#    name_ko: "연구원"
+#    role: "Research Associates"
+#    role_ko: "연구원"
+#    program: "M.S."
+#    email: ""
+#    research_interests:
+#      - UAV mapping
+#      - Point cloud processing
+#    photo: ""
+#    homepage: ""
+#    period: "Present"
+#    status: "current"
+#    group: "graduate"
+
 graduate_students:
-  - name: "Graduate Student"
-    name_ko: "대학원생"
-    role: "M.S./Ph.D. Student"
-    role_ko: "석사/박사과정"
-    program: "M.S./Ph.D."
-    email: ""
-    research_interests:
-      - UAV mapping
-      - Point cloud processing
-    photo: ""
-    homepage: ""
-    period: "Present"
-    status: "current"
-    group: "graduate"
+#  - name: "Graduate Student"
+#    name_ko: "대학원생"
+#    role: "M.S./Ph.D. Student"
+#    role_ko: "석사/박사과정"
+#    program: "M.S./Ph.D."
+#    email: ""
+#    research_interests:
+#      - UAV mapping
+#      - Point cloud processing
+#    photo: ""
+#    homepage: ""
+#    period: "Present"
+#    status: "current"
+#    group: "graduate"
+
 undergraduate_researchers:
-  - name: "Undergraduate Researcher"
-    name_ko: "학부연구생"
+  - name: "Seungho Kim"
+    name_ko: "김승호"
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
     program: "B.S."
     email: ""
     research_interests:
-      - Spatial data analysis
+      - Geoinformatics
     photo: ""
     homepage: ""
-    period: "Present"
     status: "current"
     group: "undergraduate"
-alumni:
-  - name: "Alumni Name"
-    name_ko: "졸업생"
-    role: "Alumnus"
-    role_ko: "졸업생"
-    program: ""
+
+  - name: "Minseon Bang"
+    name_ko: "방민선"
+    role: "Undergraduate Researcher"
+    role_ko: "학부연구생"
+    program: "B.S."
     email: ""
     research_interests:
-      - Photogrammetry
+      - Geoinformatics
     photo: ""
     homepage: ""
-    period: "YYYY-YYYY"
-    status: "alumni"
-    group: "alumni"
+    status: "current"
+    group: "undergraduate"
+
+  - name: "Jieun Lim"
+    name_ko: "임지은"
+    role: "Undergraduate Researcher"
+    role_ko: "학부연구생"
+    program: "B.S."
+    email: ""
+    research_interests:
+      - Geoinformatics
+    photo: ""
+    homepage: ""
+    status: "current"
+    group: "undergraduate"
+
+alumni:
+#  - name: "Alumni Name"
+#    name_ko: "졸업생"
+#    role: "Alumnus"
+#    role_ko: "졸업생"
+#    program: ""
+#    email: ""
+#    research_interests:
+#      - Photogrammetry
+#    photo: ""
+#    homepage: ""
+#    period: "YYYY-YYYY"
+#    status: "alumni"
+#    group: "alumni"
