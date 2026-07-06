@@ -9,7 +9,7 @@ alternate_url: /ko/office-hours/
 {% assign office = site.data.office_hours_en %}
 
 <section class="page wrap">
-  <h2>{{ office.title }}</h2>
+  <h1 class="page-title">{{ office.title }}</h1>
   {% for line in office.description %}
     <p>{{ line }}</p>
   {% endfor %}

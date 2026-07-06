@@ -7,7 +7,7 @@ alternate_url: /ko/people/
 ---
 
 <section class="page wrap">
-  <h2>Lab Members</h2>
+  <h1 class="page-title">Lab Members</h1>
   {% assign groups = "research_staff:Research Staff,graduate_students:Graduate Students,undergraduate_researchers:Undergraduate Researchers,alumni:Alumni" | split: "," %}
   {% for group in groups %}
     {% assign parts = group | split: ":" %}

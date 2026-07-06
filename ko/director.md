@@ -9,7 +9,7 @@ alternate_url: /director/
 {% assign director = site.data.director_ko %}
 
 <section class="page wrap">
-  <h2>Director</h2>
+  <h1 class="page-title">Director</h1>
   <div class="director-profile">
     <div class="director-profile-text">
       <h3 class="director-name">{{ director.name }}</h3>

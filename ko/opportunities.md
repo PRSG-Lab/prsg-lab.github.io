@@ -9,7 +9,7 @@ alternate_url: /opportunities/
 {% assign data = site.data.opportunities_ko %}
 
 <section class="page wrap">
-  <h2>{{ data.title }}</h2>
+  <h1 class="page-title">{{ data.title }}</h1>
   {% for paragraph in data.intro %}
     <p>{{ paragraph }}</p>
   {% endfor %}

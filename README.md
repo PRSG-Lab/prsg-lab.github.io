@@ -49,6 +49,34 @@ Add or edit YAML entries and Markdown collection documents and Jekyll will rebui
 - Home image: add `hero_image: /assets/images/your-image.jpg` to the front matter of `index.md` and `ko/index.md`, or leave it blank to keep the placeholder.
 - Home location: edit `location.address` and `location.map_embed_src` in `_data/home_en.yml` and `_data/home_ko.yml`. The Location section appears below Recent News on the Home page. The address is shown without an icon.
 - Home title and subtitle: edit the markup in `index.md` and `ko/index.md`. The Oswald Medium font, size, weight, and color are controlled by `.home-main-title`, `.home-lab-fullname`, and `.initial-highlight` in `assets/css/style.css`.
+- Page titles: Director, Lab Members, Research, Projects, Publications, News, Office Hours, and Opportunities use `.page-title` in `assets/css/style.css`. The page title font is Oswald Medium.
+- Home Research Keywords: edit the `keywords` list in `_data/home_en.yml` and `_data/home_ko.yml`.
+- Home recruitment image: replace `assets/images/we-want-you.png` to update the image shown below Research Keywords. The image links to `/opportunities/` on English Home and `/ko/opportunities/` on Korean Home.
+
+## Page Titles
+
+Top page titles for Director, Lab Members, Research, Projects, Publications, News, Office Hours, and Opportunities use:
+
+```css
+.page-title
+```
+
+The class is defined in `assets/css/style.css` and uses Oswald Medium with `font-weight: 500`. Home uses separate classes, `.home-main-title` and `.home-lab-fullname`, so the page title style does not change the Home title.
+
+## Home Recruitment Image
+
+The Home page displays a recruitment image directly below Research Keywords:
+
+`assets/images/we-want-you.png`
+
+Recommended format: PNG. Recommended image width: 800 px or larger. Transparent and solid backgrounds are both acceptable.
+
+On desktop, the image link is displayed at about 50% of the content width with a max width. On mobile, it becomes wider for readability. The image keeps its original ratio and is not cropped.
+
+The image is linked in:
+
+- `index.md`: `/opportunities/`
+- `ko/index.md`: `/ko/opportunities/`
 
 ## Lab Members
 

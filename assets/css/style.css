@@ -348,6 +348,16 @@ a:focus {
   font-size: 1.7rem;
 }
 
+.page-title {
+  margin: 0 0 1.25rem;
+  color: var(--navy-dark);
+  font-family: "Oswald", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+  font-size: 2.04rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
 .home-main-title {
   margin: 0 0 0.45rem;
   color: var(--navy-dark);
@@ -371,6 +381,46 @@ a:focus {
 
 .initial-highlight {
   color: #a6155f;
+}
+
+.home-recruitment-image {
+  width: 100%;
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
+.home-recruitment-image a {
+  display: inline-block;
+  width: 50%;
+  max-width: 560px;
+}
+
+.home-recruitment-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-recruitment-image a:hover img,
+.home-recruitment-image a:focus img {
+  opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .home-recruitment-image a {
+    width: 85%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-recruitment-image a {
+    width: 100%;
+  }
 }
 
 .home-hero-image {

@@ -7,7 +7,7 @@ alternate_url: /projects/
 ---
 
 <section class="page wrap">
-  <h2>Projects</h2>
+  <h1 class="page-title">Projects</h1>
   <section class="project-status-section project-status-ongoing">
     <h2 class="project-status-heading">Ongoing</h2>
     <div class="project-list">

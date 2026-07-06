@@ -7,7 +7,7 @@ alternate_url: /news/
 ---
 
 <section class="page wrap">
-  <h2>News</h2>
+  <h1 class="page-title">News</h1>
   {% assign sorted_news = site.news_ko | sort: "date" | reverse %}
   <div class="news-list">
     {% for item in sorted_news %}

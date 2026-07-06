@@ -8,6 +8,7 @@ show_hero_image: false
 ---
 
 {% assign home = site.data.home_ko %}
+{% assign opportunities_url = "/ko/opportunities/" %}
 
 <section class="hero wrap">
   {% if page.show_hero_image and page.hero_image %}
@@ -34,6 +35,11 @@ show_hero_image: false
     {% endif %}
     <div class="section">
       <p><strong>Research Keywords:</strong> {{ home.keywords | join: ", " }}</p>
+      <div class="home-recruitment-image">
+        <a href="{{ opportunities_url | relative_url }}" aria-label="View PRSG Lab opportunities">
+          <img src="{{ '/assets/images/we-want-you.png' | relative_url }}" alt="PRSG Lab recruitment poster">
+        </a>
+      </div>
     </div>
   </section>
 

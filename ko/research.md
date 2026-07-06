@@ -7,7 +7,7 @@ alternate_url: /research/
 ---
 
 <section class="page wrap">
-  <h2>Research</h2>
+  <h1 class="page-title">Research</h1>
   <div class="research-list section">
     {% for area in site.data.research_ko %}
       <section class="research-list-item">
