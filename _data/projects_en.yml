@@ -1,4 +1,11 @@
 ongoing:
+  - period: "2026.04 - 2026.11"
+    title: "Foundational Research for Global Orthophoto Generation Using CAS500-1"
+    agency: "Korea Aerospace Research Institute (KARI)"
+    keywords:
+      - "Satellite geometry"
+      - "Remote sensing"
+      - "Orthophoto generation"
   - period: "2026.04 - 2028.03"
     title: "Conceptualization and Extension of 3D Gaussian Splatting-Based Modeling for High-Precision 3D Geospatial Reconstruction"
     agency: "JBNU Industry Foundation"
@@ -7,6 +14,12 @@ ongoing:
       - "Novel scene representation"
       - "3DGS"
       - "3D reconstruction"
+  - period: "2026.02 - 2026.11"
+    title: "Research on Image Registration Techniques for Automated True Orthophoto Production"
+    agency: "National Geographic Information Institute (NGII)"
+    keywords:
+      - "Photogrammetry"
+      - "Geoinformatics"
   - period: "2025.03 - 2030.02"
     title: "A Study on Digital Twin Generation Technology Using NeRF and Super-Resolution Image"
     agency: "National Reseach Foundation"
