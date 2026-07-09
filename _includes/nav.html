@@ -46,9 +46,31 @@
           {% endif %}
         </div>
       {% endfor %}
-      <a class="language-link nav-language" href="{{ page.alternate_url | default: '/' | relative_url }}">
-        {% if page.lang == 'ko' %}EN{% else %}KO{% endif %}
-      </a>
+      {% if page.lang == 'ko' %}
+        {% assign en_url = page.alternate_url | default: '/' %}
+        {% assign ko_url = page.url | default: '/ko/' %}
+      {% else %}
+        {% assign en_url = page.url | default: '/' %}
+        {% assign ko_url = page.alternate_url | default: '/ko/' %}
+      {% endif %}
+      <div class="language-switcher nav-language-switcher" aria-label="Language switcher">
+        <a
+          class="language-link nav-language{% unless page.lang == 'ko' %} is-active{% endunless %}"
+          href="{{ en_url | relative_url }}"
+          aria-label="View English site"
+          title="English">
+          <img class="language-flag" src="{{ '/assets/images/usa.png' | relative_url }}" alt="">
+          <span class="language-flag-text">EN</span>
+        </a>
+        <a
+          class="language-link nav-language{% if page.lang == 'ko' %} is-active{% endif %}"
+          href="{{ ko_url | relative_url }}"
+          aria-label="View Korean site"
+          title="Korean">
+          <img class="language-flag" src="{{ '/assets/images/korea.png' | relative_url }}" alt="">
+          <span class="language-flag-text">KO</span>
+        </a>
+      </div>
     </div>
   </div>
 </nav>

@@ -213,10 +213,24 @@ a:focus {
   background: rgba(16, 38, 58, 0.06);
 }
 
-.site-nav .nav-language {
+.site-nav .nav-language-switcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   align-self: center;
-  padding: 0.4rem 0.7rem;
+  gap: 0.35rem;
+}
+
+.site-nav .nav-language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32rem;
+  margin-left: 0;
+  min-width: 2.75rem;
+  min-height: 2rem;
+  padding: 0.28rem 0.45rem;
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.58);
 }
@@ -225,6 +239,27 @@ a:focus {
 .site-nav .nav-language:focus {
   color: var(--white);
   background: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav .nav-language.is-active {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.85);
+}
+
+.language-flag {
+  display: block;
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.language-flag-text {
+  color: var(--white);
+  font-size: 0.78rem;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .site-header,
@@ -1333,11 +1368,23 @@ a:focus {
     padding: 0.65rem 0 0.65rem 1.25rem;
   }
 
-  .site-nav .nav-language {
+  .site-nav .nav-language-switcher {
     width: 100%;
     margin-left: 0;
-    padding: 0.65rem 0;
-    border: 0;
+    padding: 0.45rem 0;
+    justify-content: flex-start;
+  }
+
+  .site-nav .nav-language {
+    width: auto;
+    min-height: 2.4rem;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .language-flag {
+    width: 32px;
+    height: 21px;
   }
 
   .home-hero-image img {
