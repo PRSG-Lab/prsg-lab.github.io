@@ -1,4 +1,11 @@
 ongoing:
+  - period: "2026.07 - 2027.01"
+    title: "Estimation of the Minimum Detectable Displacement for Structural Surface Change Detection Considering Scan Geometry and Registration Uncertainty in Compact Terrestrial LiDAR"
+    agency: "Jeonbuk University"
+    keywords:
+      - "Point cloud"
+      - "LiDAR Geometry"
+      - "Quality Assessment"
   - period: "2026.04 - 2026.11"
     title: "Foundational Research for Global Orthophoto Generation Using CAS500-1"
     agency: "Korea Aerospace Research Institute (KARI)"
@@ -22,7 +29,7 @@ ongoing:
       - "Geoinformatics"
   - period: "2025.03 - 2030.02"
     title: "A Study on Digital Twin Generation Technology Using NeRF and Super-Resolution Image"
-    agency: "National Reseach Foundation"
+    agency: "National Reseach Foundation (NRF)"
     keywords:
       - "Photogrammetry"
       - "Novel scene representation"
@@ -32,7 +39,7 @@ ongoing:
 completed:
   - period: "2022.03 - 2025.02"
     title: "Development of 3D spatial information acquisition platform and processing technique for digital twin of smart city"
-    agency: "National Reseach Foundation"
+    agency: "National Reseach Foundation (NRF)"
     keywords:
       - "Photogrammetry"
       - "Smart city"
