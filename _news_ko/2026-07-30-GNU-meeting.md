@@ -3,10 +3,10 @@ layout: news
 lang: ko
 title: "경상국립대학교 측량 및 도시정보 연구실 미팅"
 date: 2026-07-30
-image: /assets/images/news/2026-07-30-GNU-meeting/main.jpg
+image: /assets/images/news/2026-07-30-GNU-meeting/main.jpeg
 gallary:
-  - /assets/images/news/026-07-30-GNU-meeting/01.jpg
-  - /assets/images/news/026-07-30-GNU-meeting/02.jpg
+  - /assets/images/news/026-07-30-GNU-meeting/01.jpeg
+  - /assets/images/news/026-07-30-GNU-meeting/02.jpeg
 alternate_url: /news/2026-07-30-GNU-meeting/
 ---
 
