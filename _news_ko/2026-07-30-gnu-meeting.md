@@ -5,6 +5,7 @@ title: "경상국립대학교 측량 및 도시정보 연구실 미팅"
 date: 2026-07-30
 image: /assets/images/news/2026-07-30-gnu-meeting/main.jpeg
 gallery:
+  - /assets/images/news/2026-07-30-gnu-meeting/main.jpeg
   - /assets/images/news/2026-07-30-gnu-meeting/01.jpeg
   - /assets/images/news/2026-07-30-gnu-meeting/02.jpeg
 alternate_url: /news/2026-07-30-gnu-meeting/
