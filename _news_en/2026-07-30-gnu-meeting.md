@@ -5,6 +5,7 @@ title: "Meeting with the Surveying and Urban Information Laboratory at Gyeongsan
 date: 2026-07-30
 image: /assets/images/news/2026-07-30-gnu-meeting/main.jpeg
 gallery:
+  - /assets/images/news/2026-07-30-gnu-meeting/main.jpeg
   - /assets/images/news/2026-07-30-gnu-meeting/01.jpeg
   - /assets/images/news/2026-07-30-gnu-meeting/02.jpeg
 alternate_url: /ko/news/2026-07-30-gnu-meeting/
