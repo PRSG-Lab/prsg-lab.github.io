@@ -135,7 +135,9 @@ a:focus {
 .university-logo[hidden],
 .university-logo-fallback[hidden],
 .research-image img[hidden],
-.research-image-placeholder[hidden] {
+.research-image-placeholder[hidden],
+.member-photo[hidden],
+.member-photo-placeholder[hidden] {
   display: none;
 }
 
