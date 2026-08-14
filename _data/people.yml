@@ -27,8 +27,8 @@ undergraduate_researchers:
     program: "B.S."
     email: "youre4207@gmail.com"
     research_interests:
-      - Geoinformatics
-    photo: ""
+      - GeoAI
+    photo: "/assets/images/researchers/KSH_photo.jpg"
     homepage: ""
     status: "current"
     group: "undergraduate"
@@ -53,7 +53,7 @@ undergraduate_researchers:
     program: "B.S."
     email: "limjieun5619@gmail.com"
     research_interests:
-      - Geoinformatics
+      - GIS
     photo: ""
     homepage: ""
     status: "current"
