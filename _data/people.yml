@@ -20,7 +20,7 @@ research_staff: []
 graduate_students:
   - name: "Heechan Lee"
     name_ko: "이희찬"
-    role: "Graduate_student"
+    role: "Graduate student"
     role_ko: "대학원생"
     program: "Ph.D."
     email: "lhc770@naver.com"
