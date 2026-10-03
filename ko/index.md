@@ -35,11 +35,13 @@ show_hero_image: false
     {% endif %}
     <div class="section">
       <p><strong>Research Keywords:</strong> {{ home.keywords | join: ", " }}</p>
+      {% comment %}
       <div class="home-recruitment-image">
         <a href="{{ opportunities_url | relative_url }}" aria-label="View PRSG Lab opportunities">
           <img src="{{ '/assets/images/we-want-you.png' | relative_url }}" alt="PRSG Lab recruitment poster">
         </a>
       </div>
+      {% endcomment %}
     </div>
   </section>
 
