@@ -2,7 +2,7 @@ intro:
 - "Welcome to the Photogrammetry, Remote Sensing, and Geoinformatics Laboratory (PRSG Lab)."
 - "PRSG Lab is a surveying and geoinformatics research laboratory affiliated with the Department of Civil Engineering at Jeonbuk National University. Our research is grounded in the principles of surveying, geodesy, photogrammetry, remote sensing, and imaging geometry, with a focus on generating precise geospatial data, analyzing Earth observation data, and constructing three-dimensional spatial models."
 - "By integrating conventional surveying and photogrammetric theories with advanced artificial intelligence and computer vision techniques, we extract reliable information on position, shape, and change from satellite, aerial, UAV, terrestrial, and laser scanning data."
-- "We are currently recruiting full-time M.S. and Ph.D. students for our lab. For more details, please refer to the Opportunities tab."
+#- "We are currently recruiting full-time M.S. and Ph.D. students for our lab. For more details, please refer to the Opportunities tab."
 pi_heading: ""
 pi_text: ""
 keywords:
