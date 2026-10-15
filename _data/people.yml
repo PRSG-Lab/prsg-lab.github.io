@@ -18,11 +18,25 @@ pi:
 research_staff: []
 
 graduate_students:
+  - name: "Jeong-Kuk ㅓㅑ"
+    name_ko: "지정국"
+    role: "Graduate student (Part time)"
+    role_ko: "대학원생(파트타임)"
+    program: "Ph.D. Program"
+    email: "jijk76@paran.com"
+    research_interests:
+      - Cadastral Surveying
+    photo: ""
+    homepage: ""
+    status: "current"
+    group: "graduate"
+
+graduate_students:
   - name: "Huichan Lee"
     name_ko: "이희찬"
-    role: "Graduate student"
-    role_ko: "대학원생"
-    program: "Ph.D."
+    role: "Graduate student (Part time)"
+    role_ko: "대학원생(파트타임)"
+    program: "Ph.D. Program"
     email: "lhc770@naver.com"
     research_interests:
       - BIM
@@ -36,7 +50,7 @@ undergraduate_researchers:
     name_ko: "김승호"
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
-    program: "B.S."
+    program: "Undergraduate Program"
     email: "youre4207@gmail.com"
     research_interests:
       - GeoAI
@@ -49,7 +63,7 @@ undergraduate_researchers:
     name_ko: "방민선"
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
-    program: "B.S."
+    program: "Undergraduate Program"
     email: "202117668@jbnu.ac.kr"
     research_interests:
       - Geoinformatics
@@ -62,7 +76,7 @@ undergraduate_researchers:
     name_ko: "임지은"
     role: "Undergraduate Researcher"
     role_ko: "학부연구생"
-    program: "B.S."
+    program: "Undergraduate Program"
     email: "limjieun5619@gmail.com"
     research_interests:
       - GIS
