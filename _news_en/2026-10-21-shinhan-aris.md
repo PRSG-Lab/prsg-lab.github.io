@@ -1,6 +1,6 @@
 ---
 layout: news
-lang: ko
+lang: en
 title: "MOU Signed Between JBNU Department of Civil Engineering and Shinhan ARIS"
 date: 2026-07-30
 image: /assets/images/news/2026-10-21-shinhan-aris/main.jpg
