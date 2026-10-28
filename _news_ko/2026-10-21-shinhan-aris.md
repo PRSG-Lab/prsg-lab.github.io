@@ -3,11 +3,11 @@ layout: news
 lang: ko
 title: "전북대학교 토목공학과-(주)신한아리스 업무협약 체결"
 date: 2026-07-30
-image: /assets/images/news/2026-10-21-shinhan-aris/main.jpeg
+image: /assets/images/news/2026-10-21-shinhan-aris/main.jpg
 gallery:
-  - /assets/images/news/2026-10-21-shinhan-aris/main.jpeg
-  - /assets/images/news/2026-10-21-shinhan-aris/01.jpeg
-  - /assets/images/news/2026-10-21-shinhan-aris/02.jpeg
+  - /assets/images/news/2026-10-21-shinhan-aris/main.jpg
+  - /assets/images/news/2026-10-21-shinhan-aris/01.jpg
+  - /assets/images/news/2026-10-21-shinhan-aris/02.jpg
 alternate_url: /news/2026-10-21-shinhan-aris/
 ---
 
