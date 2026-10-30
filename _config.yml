@@ -17,3 +17,6 @@ exclude:
   - README.ko.md
   - Gemfile
   - Gemfile.lock
+plugins:
+    - jekyll-sitemap
+    - jekyll-seo-tag
