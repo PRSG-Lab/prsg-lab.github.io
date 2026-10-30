@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.lab_short_name }}</title>
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{% if page.lang == 'ko' %}전북대학교 측량 연구실{% else %}PRSG Lab{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
