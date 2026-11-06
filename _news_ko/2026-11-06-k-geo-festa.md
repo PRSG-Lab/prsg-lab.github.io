@@ -2,7 +2,7 @@
 layout: news
 lang: ko
 title: "PRSG Lab, 2026 K-GEO FESTA 참가 및 크라우드 소싱 데이터 활용 해커톤 수상"
-date: 2026-10-21
+date: 2026-11-06
 image: /assets/images/news/2026-11-06-k-geo-festa/kgeo_1.jpg
 gallery:
   - /assets/images/news/2026-11-06-k-geo-festa/kgeo_1.jpg
