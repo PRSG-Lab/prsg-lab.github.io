@@ -2,7 +2,7 @@
 layout: news
 lang: en
 title: "PRSG Lab Participates in 2026 K-GEO FESTA and Receives Hackathon Award"
-date: 2026-10-21
+date: 2026-11-06
 image: /assets/images/news/2026-11-06-k-geo-festa/kgeo_1.jpg
 gallery:
   - /assets/images/news/2026-11-06-k-geo-festa/kgeo_1.jpg
