@@ -2,6 +2,20 @@
 # Edit the BibTeX file, then run: node scripts/bibtex-to-publications.js
 
 - authors:
+    - name: "Junsu Bae"
+    - name: "Suhong Yoo"
+    - name: "Namhoon Kim"
+    - name: "Hong-Gyoo Sohn"
+  year: 2026
+  title: "From texture-space semantics to component-addressable surface submeshes: enrichment of textured 3D building meshes with windows and rooftop photovoltaic panels"
+  journal: "International Journal of Digital Earth"
+  volume: "19"
+  issue: "2"
+  pages: "2763246"
+  doi: "10.1080/17538947.2026.2763246"
+  link: ""
+  type: "journal"
+- authors:
     - name: "Namhoon Kim"
     - name: "Joon-Hak Lee"
     - name: "Jin-Ho Ahn"
