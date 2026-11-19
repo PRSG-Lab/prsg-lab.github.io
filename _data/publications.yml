@@ -6,6 +6,7 @@
     - name: "Suhong Yoo"
     - name: "Namhoon Kim"
     - name: "Hong-Gyoo Sohn"
+      corresponding: true
   year: 2026
   title: "From texture-space semantics to component-addressable surface submeshes: enrichment of textured 3D building meshes with windows and rooftop photovoltaic panels"
   journal: "International Journal of Digital Earth"
